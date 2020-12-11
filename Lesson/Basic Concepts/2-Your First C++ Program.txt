@@ -1,0 +1,36 @@
+Your First C++ Program
+
+
+Let's output "Hello world!" to the screen!
+To do that, we will add cout << "Hello world!"; line to our main() function body:
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << "Hello world!";
+    return 0;
+}
+
+cout is the stream object used to perform output on the standard output device which is usually the display screen.
+cout is used in combination with the insertion operator <<.
+
+!In C++, streams are used to perform input and output operations.
+
+->Drag and drop the options to output "Hello, world!" on the screen:
+cout << "Hello, world!";
+
+
+You can add multiple insertion operators after cout.
+For example:
+
+cout << "Hello,\nworld!" << endl;
+cout << "This "
+     << "is "
+     << "awesome!" << endl;
+
+!In C++, the semicolon is used to terminate a statement. Each statement must end with a semicolon. It indicates the end of one logical expression.
+
+->Each instruction must end with a: semicolon ( ; )
+

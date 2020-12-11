@@ -1,0 +1,59 @@
+Basic Concepts: Các khái niệm cơ bản
+data types: Các kiểu dữ liệu
+arrays : Mảng
+pointers: Con trỏ
+conditional statements: Câu lệnh điều kiện
+loops: Vòng lặp
+functions: Hàm
+classes: lớp
+objects: đối tượng
+inheritance: Kế thừa
+polymorphism: Đa hình
+Basic Arithmetic: Số Học cơ bản
+Assignment: Phân Công
+Increment: Gia Tăng
+decrement: giảm đi
+cross-platform language: Ngôn ngữ đa nền tảng
+popular: phổ biến
+high-performance: Hiệu suất cao
+applications: ứng dụng
+operating systems: hệ điều hành
+browsers: trình duyệt
+video-games: trò chơi điện tử
+programming language: ngôn ngữ lập trình
+General purpose: Mục đích chung
+template: bản mẫu
+commands: câu lệnh
+statements: Mệnh đề
+irrespective of: ko phân biệt (bất kể)
+entry point: Đầu vào
+input: Nhập Liệu đầu vào 
+output: xuất hình đầu ra
+streams: luồng xủ lý
+combination: sự kết hợp
+standard: tiêu chuẩn thông thường
+display screen: màn hình hiển thị
+terminate: chấm dứt
+instruction: chỉ dẫn
+offer: cung cấp
+various headers: tiêu đề khác nhau
+work properly: hoạt động đúng cách
+namespace:không gian tên 
+declarative region: vùng khai báo
+features: các tính chất
+insert: thêm vào
+Variables: Biến 
+memory location: vị trí bộ nhớ
+reserves: dự trữ
+declare: khai báo
+syntax error: lỗi cú pháp
+Specify: chỉ định
+Addition: phép cộng
+Subtraction: Phép Trừ
+Multiplication: Phép Nhân
+Division: Phép Chia lấy nguyên
+Modulus: Phép Chia Lấy Dư
+Parentheses: dấu ngoặc đơn
+innermost: trong cùng
+evaluate: đánh giá
+expressions nested: biểu thức lồng nhau

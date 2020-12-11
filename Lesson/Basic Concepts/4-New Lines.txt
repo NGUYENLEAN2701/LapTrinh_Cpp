@@ -1,0 +1,40 @@
+New Line
+
+
+The cout object does not insert a line break at the end of the output.
+One way to print two lines is to use the endl manipulator, which will put in a line break.
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << "Hello world!" << endl;
+    cout << "I love programming!";
+    return 0;
+}
+
+để kết thúc 1 dòng ta dùng:
+
+endl;
+\n
+
+->What should be used to move to a new line? endl
+
+
+The new line character \n can be used as an alternative to endl.
+Using a single cout statement with as many instances of \n as your program requires will print out multiple lines of text.
+
+Example:
+#include <iostream>
+using namespace std;
+int main(){
+    cout << "Hello world!\n";
+    cout << "I Love programming!\n" << "I Love C++" << endl;
+    return 0;
+}
+
+
+!The backslash (\) is called an escape character, and indicates a "special" character.
+
+->What is the symbol for moving to a new line (alternative to the endl)? \n

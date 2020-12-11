@@ -1,0 +1,17 @@
+->#include <iostream>
+using namespace std;
+int main()
+{
+    cout << "I love C++" << endl;
+    return 0;
+}
+->int x = 4;
+int y = 7;
+int sum = x + y;
+cout << "sum equals to " << sum << endl;
+->In every C++ program:
+there must be a function named main
+each variable must have its data type
+->int x = 81;
+int y = 3;
+cout << x/ y << endl;

@@ -1,0 +1,30 @@
+Comments
+
+
+Comments are explanatory statements that you can include in the C++ code to explain what the code is doing.
+The compiler ignores everything that appears in the comment, so none of that information shows in the result.
+
+A comment beginning with two slashes (//) is called a single-line comment. The slashes tell the compiler to ignore everything that follows, until the end of the line.
+
+When the above code is compiled, it will ignore the // prints "Hello world" statement.
+
+!Adding comments to your code is a good practice. It facilitates a clear understanding of the code for you and for others who read it.
+
+//! thêm ghi chú sẽ giúp người khác dễ đọc hiểu code và tái sử dụng
+
+->Which choice indicates a single-line comment? //single line comment
+
+Multi-Line Comments
+
+
+Comments that require multiple lines begin with /* and end with */
+You can place them on the same line or insert one or more lines between them.
+
+
+!Comments can be written anywhere, and can be repeated any number of times throughout the code.
+
+->Create a block comment (multiline comment) in C++:
+
+/* this is a  block/multiline
+
+ comment in C++ */

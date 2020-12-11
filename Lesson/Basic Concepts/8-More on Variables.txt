@@ -1,0 +1,34 @@
+Variables
+
+
+Specifying the data type is required just once, at the time when the variable is declared.
+After that, the variable may be used without referring to the data type.
+
+int a;
+a = 10;
+
+!Specifying the data type for a given variable more than once results in a syntax error.
+
+->How many times should a data type be mentioned for a variable? 
+Only once: when declaring the variable
+
+
+A variable's value may be changed as many times as necessary throughout the program.
+
+For example:
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a = 100;
+    a = 50;
+    cout << a;
+    return 0;
+}
+
+->int a = 15;
+
+int b = a;
+
+cout << a + b << endl;

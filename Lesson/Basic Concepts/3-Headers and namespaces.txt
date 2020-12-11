@@ -1,0 +1,47 @@
+Headers
+
+
+C++ offers various headers, each of which contains information needed for programs to work properly.
+We have already seen the standard <iostream> header on our first C++ program:
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << "Hello world!";
+    return 0;
+}
+
+#include is used for adding a standard or user-defined header files to the program.
+
+!The <iostream> header defines the standard stream objects that input and output data.
+
+
+tóm lại tiêu đề dùng để thêm vào thư viện có sẵn hoặc thư viện người dùng tự tạo để chương trình hoạt động
+
+->Drag and drop the answers to include the <iostream> header: 
+#include <iostream>
+
+
+Namespaces
+
+
+A namespace is a declarative region that provides a scope to the identifiers (names of elements) inside it.
+In our code, the line using namespace std; tells the compiler to use the std (standard) namespace:
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+cout << "Hello world!";
+return 0;
+} 
+
+!The std namespace includes features of the C++ Standard Library.
+
+khi dùng using namespace std; thì ta ko cần gõ std::cout khi dùng các câu lệnh trong thư viện c++.
+
+
+->Which of the options is the name of namespace that includes the C++ Standard Library: std

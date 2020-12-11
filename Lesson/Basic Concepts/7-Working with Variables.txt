@@ -1,0 +1,66 @@
+Declaring Variables
+
+
+You have the option to assign a value to the variable at the time you declare the variable or to declare it and assign a value later.
+You can also change the value of a variable.
+Some examples:
+
+int a; 
+int b = 42;
+
+a = 10;
+b = 3;
+
+
+!You can assign a value to a variable only in a declared data type.
+
+->Fill in the blanks to declare variable a of type int and then assign 7 as its value:
+int a;
+a = 7;
+
+
+User Input
+
+
+To enable the user to input a value, use cin in combination with the extraction operator (>>). The variable containing the extracted data follows the operator.
+The following example shows how to accept user input and store it in the num variable:
+
+int num;
+cin >> num;
+
+!As with cout, extractions on cin can be chained to request more than one input in a single statement: cin >> a >> b;
+
+!khi nhập liệu có thể sử dụng enter hoặc space để phân biệt 2 dữ liệu a, b ...
+
+->What is the purpose of cin? Take information (data) from the user
+
+Accepting User Input
+
+
+The following program prompts the user to input a number and stores it in the variable a:
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a;
+    cout << "Please enter a number \n";
+    cin >> a;
+
+    cout << a;
+
+    return 0;
+}
+
+When the program runs, it displays the message "Please enter a number", and then waits for the user to enter a number and press Enter, or Return.
+The entered number is stored in the variable a.
+!The program will wait for as long as the user needs to type in a number.
+
+->Type in the code that allows for entering a number and storing it in the variable a: cin >> a;
+->int var;
+cout << "Please enter a value \n";
+cin >> var;
+->int sum;
+sum = 21 + 7;
+cout << "sum is equal to " << sum << endl;
