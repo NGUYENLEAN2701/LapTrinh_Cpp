@@ -57,3 +57,4 @@ Parentheses: dấu ngoặc đơn
 innermost: trong cùng
 evaluate: đánh giá
 expressions nested: biểu thức lồng nhau
+quadratic equation: Phương Trình Bậc 2

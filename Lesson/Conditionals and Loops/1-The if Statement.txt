@@ -1,0 +1,18 @@
+Decision Making
+
+
+The if statement is used to execute some code if a condition is true.
+
+Syntax:
+
+if (condition) {
+   statements
+}
+
+The condition specifies which expression is to be evaluated. If the condition is true, the statements in the curly brackets are executed.
+
+
+!If the condition is false, the statements are simply ignored, and the program continues to run after the if statements body.
+
+
+->if (test) { }
