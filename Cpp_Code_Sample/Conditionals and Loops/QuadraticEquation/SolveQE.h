@@ -143,6 +143,7 @@ void Solve_QuadraticEquation(float a, float b, float c, Result_QE *x1, Result_QE
 
 void Print_Value(Result_QE x, std::wstring s)
 {
+    //in một giá trị nghiệm ra màn hình đúng tiêu chuẩn sgk...
     switch (x.Exist)
     {
     case -1:
