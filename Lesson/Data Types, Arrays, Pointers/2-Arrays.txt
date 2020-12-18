@@ -5,3 +5,233 @@ An array is used to store a collection of data, but it may be useful to think of
 Instead of declaring multiple variables and storing individual values, you can declare a single array to store all the values.
 When declaring an array, specify its element types, as well as the number of elements it will hold.
 For example:
+int a[5];
+
+
+In the example above, variable a was declared as an array of five integer values [specified in square brackets].
+You can initialize the array by specifying the values it holds:
+int b[5] = {11, 45, 62, 70, 88};
+
+The values are provided in a comma separated list, enclosed in {curly braces}.
+
+!The number of values between braces { } must not exceed the number of the elements declared within the square brackets [ ].
+
+
+->int myArr[5] = { 1, 2, 3, 4, 5 };
+
+Initializing Arrays
+
+
+If you omit the size of the array, an array just big enough to hold the initialization is created.
+For example:
+
+int b[] = {11, 45, 62, 70, 88};
+
+This creates an identical array to the one created in the previous example.
+
+Each element, or member, of the array has an index, which pinpoints the element's specific position.
+The array's first member has the index of 0, the second has the index of 1.
+So, for the array b that we declared above:
+
+b[0] = 11;
+b[1] = 45;
+b[2] = 62;
+b[3] = 70;
+b[4] = 88;
+
+To access array elements, index the array name by placing the element's index in square brackets following the array name.
+For example:
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int b[] = {11, 45, 62, 70, 88};
+
+    cout << b[0] << endl;
+    // Outputs 11
+    
+    cout<< b[3] << endl;
+    // Outputs 70
+
+    return 0;
+}
+
+
+->cout << arr[0] << endl;
+cout << arr[4] << endl;
+
+
+
+Accessing Array Elements
+
+Index numbers may also be used to assign a new value to an element.
+
+int b[] = {11, 45, 62, 70, 88};
+b[2] = 42;
+
+This assigns a value of 42 to the array's third element.
+
+!Always remember that the list of elements always begins with the index of 0.
+
+
+->The array in C++ starts counting from: 0
+
+
+Arrays in Loops
+
+
+It's occasionally necessary to iterate over the elements of an array, assigning the elements values based on certain calculations.
+
+!Usually, this is accomplished using a loop.
+
+
+->int anArray[9];
+
+Let's declare an array, that is going to store 5 integers, and assign a value to each element using the for loop:
+
+int myArr[5];
+
+for(int x=0; x<5; x++) {
+  myArr[x] = 42;
+}
+
+Each element in the array is assigned the value of 42.
+The x variable in the for loop is used as the index for the array.
+
+!The last index in the array is 4, so the for loop condition is x<5.
+
+->int anArray[9] ;
+
+for (int x = 0; x <= 8; x++){
+ anArray[x] = 45;
+}
+
+Let's output each index and corresponding value in the array.
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int myArr[5];
+
+    for(int x=0; x<5; x++) {
+        myArr[x] = 42;
+ 
+        cout << x << ": " << myArr[x] << endl;
+    }
+
+    return 0;
+}
+
+->for (int x = 0; x < 3; x++) {
+    cout << arr[x] << endl;
+}
+
+
+
+Arrays in Calculations
+
+
+The following code creates a program that uses a for loop to calculate the sum of all elements of an array.
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int arr[] = {11, 35, 62, 555, 989};
+    int sum = 0; 
+
+    for (int x = 0; x < 5; x++) {
+        sum += arr[x];
+    }
+
+    cout << sum << endl;
+
+    return 0;
+}
+
+To review, we declared an array and a variable sum that will hold the sum of the elements.
+Next, we utilized a for loop to iterate through each element of the array, and added the corresponding element's value to our sum variable.
+
+!In the array, the first element's index is 0, so the for loop initializes the x variable to 0.
+
+
+->double sum = 0.0;
+
+for (int x = 0; x < 4; x++) {
+  sum += myArray[x];
+}
+cout << sum << endl;
+
+
+
+Multi-Dimensional Arrays
+
+A multi-dimensional array holds one or more arrays. Declare a multidimensional array as follows.
+
+type name[size1][size2]...[sizeN];
+
+Here, we've created a two-dimensional 3x4 integer array:
+
+int x    [3]        [4];
+        rows        column      
+
+!Remember element counting always starts from 0.
+
+->int multiArr[2][4];
+
+
+Two-Dimensional Arrays
+
+
+Multi-dimensional arrays may be initialized by specifying bracketed values for each row.
+Following is an array with 2 rows and 3 columns:
+
+int x[2][3] = {
+  {2, 3, 4}, // 1st row
+  {8, 9, 10} // 2nd row
+};
+
+You can also write the same initialization using just one row.
+
+int x[2][3] = {{2, 3, 4}, {8, 9, 10}};
+
+The elements are accessed by using the row index and column index of the array.
+For example:
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int x[2][3] = {{2, 3, 4}, {8, 9, 10}};
+    cout << x[0][2] << endl;
+
+    return 0;
+}
+
+!The first index 0 refers to the first row. The second index 2 refers to the 3rd element of the first row, which is 4.
+
+
+->cout << arr[0][1] << endl;
+
+
+
+Multi-Dimensional Arrays
+Arrays can contain an unlimited number of dimensions.
+
+string threeD[42][8][3];
+
+The example above declares a three-dimensional array of strings. As we did previously, it's possible to use index numbers to access and modify the elements.
+
+
+!Arrays more than three dimensions are harder to manage.
+
+
+->int arr[2][3];
+cin >> arr[1][1];

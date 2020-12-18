@@ -155,3 +155,70 @@ For example, int, float, double, cout cannot be used as a variable name.
 ->int var3;
 double salary;
 bool ab_c14;
+
+
+sizeof kích thước dữ Liệu
+
+
+The sizeof operator can be used to get a variable or data type's size, in bytes.
+Syntax:
+sizeof (data type)
+
+The sizeof operator determines and returns the size of either a type or a variable in bytes.
+For example:
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout << "char: " << sizeof(char) << endl;
+    cout << "int: " << sizeof(int) << endl;
+    cout << "float: " << sizeof(float) << endl;
+    cout << "double: " << sizeof(double) << endl;
+    int var = 50;
+    cout << "var: " << sizeof(var) << endl;
+
+    return 0;
+}
+
+->char c;
+cout << sizeof(c) << endl;
+
+
+Size of an Array
+
+
+The C++ sizeof operator is also used to determine the size of an array.
+
+For example:
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    double myArr[10];
+    cout << sizeof(myArr) << endl;
+
+    return 0;
+}
+On our machine, double takes 8 bytes. The array stores 10 doubles, so the entire array occupies 80 (8*10) bytes in the memory.
+
+In addition, divide the total number of bytes in the array by the number of bytes in a single element to learn how many elements you have in the array.
+
+For example:
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int numbers[100];
+    cout << sizeof(numbers) / sizeof(numbers[0]);
+
+    return 0;
+}
+
+
+
+->double arr[10];
+cout << sizeof(arr) << endl;

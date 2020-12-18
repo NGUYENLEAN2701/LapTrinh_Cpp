@@ -1,0 +1,29 @@
+->int a;
+double b;
+char c;
+string d;
+
+
+->Which of the following are legal variable names in C++? notLegal , think_is_LEGAl
+
+->double darr[12];
+
+->for (int x = 0; x < 4; x++) {
+ cout << myArray[x] << endl;
+}
+
+->int myArray[14];
+for (int x = 0; x < 14; x++) {
+ cin >> myArray[x];
+}
+
+
+->What is the function of the new int; expression? Allocates memory on the heap
+
+->int var = 25;
+int* ptr =&var;
+
+->int a = 12; int b = 14;
+int* pa = &a;
+int* pb = &b;
+cout << *pa / *pb << endl;

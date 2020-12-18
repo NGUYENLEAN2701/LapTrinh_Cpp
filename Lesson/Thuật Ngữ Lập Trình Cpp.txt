@@ -66,3 +66,9 @@ positive numbers: số dương
 Case-Sensitivity: phân biệt chữ hoa chữ thường
 meaningful: có ý nghĩa
 practical: thiết thực
+occasionally: thỉnh thoảng
+necessary: cần thiết
+elements: nhiều phần tử
+rows: hàng
+columns: cột
+ampersand: dấu &
