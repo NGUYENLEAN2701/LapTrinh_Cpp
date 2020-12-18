@@ -1,0 +1,92 @@
+->main
+->void myFunction(int a = 1, int b = 2){
+    cout << a * b << endl;
+}
+
+->The three terms used to describe an object in object-oriented programming are attributes, behavior, identity
+
+->void calcSum(int arr[], int size){ 
+    int sum = 0;
+    for (int x = 0; x < size; x++) { 
+
+   sum += arr[x];
+ }
+    cout << sum << endl;
+}
+
+->How many functions (methods) can a class have? As many as you want
+
+->class Student{
+public:
+  void hello() {    
+    cout << "hi from student" << endl; 
+  }
+};
+
+->void myFunction(int x){
+ cout << x << endl;
+}
+
+->double sum(double x, double y, double z){
+
+ return x + y + z;
+}
+
+int main(){
+
+ double a = 1.2;
+
+ double b = 2.3;
+
+ double c = 3.4;
+
+ cout << sum(a, b, c);
+
+ return 0;
+
+}
+
+->class Student
+{
+private:
+    int age;
+
+public:
+    Student(int a)
+    {
+
+        setAge(a);
+    }
+
+    void setAge(int a)
+    {
+
+        age = a;
+    }
+
+    int getAge()
+    {
+
+        return age;
+    }
+};
+
+->void calcSum(int arr[], int size){
+
+ int sum = 0;
+ for (int x = 0; x < size; x++) { 
+
+   sum += arr[x];
+ }
+ cout << sum << endl;
+}
+
+->void printIt(){
+ cout << "I love C++" << endl;
+}
+int main(){
+ printIt();
+ return 0;
+}
+
+->An Object is an instance of a Class

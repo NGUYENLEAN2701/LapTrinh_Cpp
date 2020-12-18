@@ -9,5 +9,9 @@ int main(void)
          << "is "
          << "awesome!" << endl;
     Hello();
+    int a = 3;
+    int b = 2;
+    b = a++;
+    cout << ++b;
     return 0;
 }
