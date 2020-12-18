@@ -1,0 +1,103 @@
+The do...while Loop
+
+
+Unlike for and while loops, which test the loop condition at the top of the loop, the do...while loop checks its condition at the bottom of the loop.
+A do...while loop is similar to a while loop. The one difference is that the do...while loop is guaranteed to execute at least one time.
+Syntax:
+
+
+do {
+   statement(s);
+} while (condition);
+
+
+!For example, you can take input from the user, then check it. If the input is wrong, you can take it again.
+
+
+->do { } while (test);
+
+
+example:
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a = 0;
+    do
+    {
+        cout << a << endl;
+        a++;
+
+    } while (a < 1000);
+    return 0;
+}
+
+
+->int x = 0;
+
+do {
+
+  cout << x << endl;
+
+  x++;
+
+} 
+
+while (x < 10);
+
+
+while vs. do...while
+
+
+If the condition evaluated to false, the statements in the do would still run once:
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a = 42;
+    do {
+        cout << a << endl;
+        a++;
+    } while(a < 5);
+
+    return 0;
+}
+
+!The do...while loop executes the statements at least once, and then tests the condition.
+The while loop executes the statement after testing condition.
+
+
+
+->do...while loop runs your code at least one time
+
+
+As with other loops, if the condition in the loop never evaluates to false, the loop will run forever.
+For example:
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a = 42;
+    do {
+        cout << a << endl;
+    } while (a > 0);
+
+    return 0;
+}
+
+This will print 42 to the screen forever.
+
+!Always test your loops, so you know that they operate in the manner you expect.
+
+->
+int x = 1;
+do {
+  cout << "this is a loop" << endl;
+  x++;
+} 
+while (x <= 15);

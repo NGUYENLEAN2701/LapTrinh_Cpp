@@ -58,3 +58,11 @@ innermost: trong cùng
 evaluate: đánh giá
 expressions nested: biểu thức lồng nhau
 quadratic equation: Phương Trình Bậc 2
+intended to: mục đích
+Expressions: biểu thức
+legal: hợp pháp
+illegal: bất hợp pháp
+positive numbers: số dương
+Case-Sensitivity: phân biệt chữ hoa chữ thường
+meaningful: có ý nghĩa
+practical: thiết thực

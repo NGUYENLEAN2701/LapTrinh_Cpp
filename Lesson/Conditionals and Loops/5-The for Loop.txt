@@ -1,0 +1,65 @@
+The for loop
+
+
+A for loop is a repetition control structure that allows you to efficiently write a loop that executes a specific number of times.
+Syntax:
+
+for ( init; condition; increment ) {
+  statement(s);
+}
+
+The init step is executed first, and does not repeat.
+Next, the condition is evaluated, and the body of the loop is executed if the condition is true.
+In the next step, the increment statement updates the loop control variable.
+Then, the loop's body repeats itself, only stopping when the condition becomes false.
+
+For example:
+
+
+for (int x = 1; x < 10; x++) {
+ // some code
+ }
+
+ !The init and increment statements may be left out, if not needed, but remember that the semicolons are mandatory.
+
+ ->for (int x = 1; x < 10; x++) { }
+
+
+ The example below uses a for loop to print numbers from 0 to 9.
+
+ for(int x = 1; x < 10; x++){
+     cout << a << endl;
+ }
+
+ In the init step, we declared a variable a and set it to equal 0.
+a < 10 is the condition.
+After each iteration, the a++ increment statement is executed.
+
+!When a increments to 10, the condition evaluates to false, and the loop stops.
+
+->for (int x = 1; x <= 10; x++) {
+
+  cout << x << endl;
+
+}
+
+It's possible to change the increment statement.
+
+
+->for (int x = 1; x <= 10; x+=10) {
+
+  cout << x << endl;
+
+}
+
+
+!When using the for loop, don't forget the semicolon after the init and condition statements.
+
+->for (int x = 0; x <= 20 ; x += 2) {
+
+  cout << x << endl;
+
+}
+
+
+

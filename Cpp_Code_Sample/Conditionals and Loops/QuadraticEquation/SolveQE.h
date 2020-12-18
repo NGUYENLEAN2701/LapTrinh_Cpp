@@ -7,7 +7,17 @@
 #include <algorithm>
 #include <conio.h>
 #include <sstream>
-
+#ifdef max
+#undef max
+#endif // max undef
+#ifdef ESC
+#undef ESC
+#endif
+#define ESC 27 // ESC
+#ifdef ENTER
+#undef ENTER
+#endif
+#define ENTER 13 // ENTER
 typedef struct Result_QE
 {
     float Real_Value = 0;
@@ -17,7 +27,7 @@ typedef struct Result_QE
 
 float Input_Value(char c)
 {
-    float num;
+    float num = 0;
     while (std::wcout << L"Nhập " << c << L" = " && !(std::wcin >> num))
     {
         std::wcin.clear();                                                   //clear bad input flag
@@ -143,12 +153,10 @@ void Solve_QuadraticEquation(float a, float b, float c, Result_QE *x1, Result_QE
 
 void Print_Value(Result_QE x, std::wstring s)
 {
-    //in một giá trị nghiệm ra màn hình đúng tiêu chuẩn sgk...
     switch (x.Exist)
     {
     case -1:
     {
-
         std::wcout << L"->Phương Trình Vô Nghiệm" << std::endl;
         break;
     }

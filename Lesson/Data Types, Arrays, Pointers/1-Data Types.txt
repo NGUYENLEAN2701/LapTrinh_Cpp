@@ -1,0 +1,157 @@
+->Data types are intended to: Define the proper use of an identifier
+
+->Which of the following expressions are legal in C++? 12+4
+
+
+Numeric data types include:
+Integers (whole numbers), such as -7, 42.
+Floating point numbers, such as 3.14, -42.67.
+
+
+->Which of the following are correct values for the numeric data types?1000 3.14
+
+A string is composed of numbers, characters, or symbols. String literals are placed in double quotation marks; some examples are "Hello", "My name is David", and similar.
+
+Characters are single letters or symbols, and must be enclosed between single quotes, like 'a', 'b', etc.
+
+
+->Which one is a legal character, not a string? 't'
+
+The Boolean data type returns just two possible values: true (1) and false (0).
+
+->What is the result of 10 == 10 operation? Is it true or false? true
+
+
+
+
+Kiểu	            Độ rộng bit	                Dãy giá trị
+char	            1 byte	                    -127 tới 127 hoặc 0 tới 255
+unsigned char	    1 byte	                    0 tới 255
+signed char	        1 byte	                    -127 tới 127
+int	                4 byte	                    -2,147,483,648 tới 2,147,483,647
+unsigned int	    4 byte	                    0 tới 4294967295
+signed int	        4 byte	                    -2,147,483,648 tới 2,147,483,647
+short int	        2 byte	                    -32,768 tới 32,767
+unsigned short int	2 byte	                    0 tới 65,535
+signed short int	2 byte	                    -32768 tới 32767
+long int	        4 byte	                    -2,147,483,647 tới 2,147,483,647
+signed long int	    4 byte                   	-2,147,483,647 tới 2,147,483,647
+unsigned long int	4 byte	                    0 tới 4,294,967,295
+float	            4 byte	                    +/- 3.4e +/- 38 (~7 chữ số)
+double	            8 byte	                    +/- 1.7e +/- 308 (~15 chữ số)
+long double	        8 byte or 16 byte	        +/- 1.7e +/- 308 (~15 chữ số)
+wchar_t	            2 hoặc 4 byte	            1 wide character
+
+
+signed: A signed integer can hold both negative and positive numbers.
+unsigned: An unsigned integer can hold only positive values.
+short: Half of the default size.
+long: Twice the default size.
+
+
+->Is 3.14 an integer? No
+->unsigned int var;
+->Can floating point types hold negative numbers? yes
+
+
+
+Strings
+
+
+A string is an ordered sequence of characters, enclosed in double quotation marks.
+It is part of the Standard Library.
+You need to include the <string> library to use the string data type. Alternatively, you can use a library that includes the string library.
+
+
+#include <string>
+using namespace std;
+
+int main() {
+    string a = "I am learning C++";
+    return 0;
+}
+
+!The <string> library is included in the <iostream> library, so you don't need to include <string> separately, if you already use <iostream>.
+
+->#include <string>
+
+
+
+
+
+Characters
+
+
+A char variable holds a 1-byte integer. However, instead of interpreting the value of the char as an integer, the value of a char variable is typically interpreted as an ASCII character.
+
+A character is enclosed between single quotes (such as 'a', 'b', etc).
+For example:
+char test = 'S';
+
+
+!American Standard Code for Information Interchange (ASCII) is a character-encoding scheme that is used to represent text in computers.
+
+->char var = 'z';
+
+
+Booleans
+
+
+Boolean variables only have two possible values: true (1) and false (0).
+To declare a boolean variable, we use the keyword bool.
+
+
+bool online = false;
+bool logged_in = true;
+
+!If a Boolean value is assigned to an integer, true becomes 1 and false becomes 0.
+If an integer value is assigned to a Boolean, 0 becomes false and any value that has a non-zero value becomes true.
+
+
+->bool a = false;
+bool b = true;
+
+
+
+
+Variable Naming Rules
+
+Use the following rules when naming variables:
+- All variable names must begin with a letter of the alphabet or an underscore( _ ).
+- After the initial letter, variable names can contain additional letters, as well as numbers. Blank spaces or special characters are not allowed in variable names.
+
+
+!There are two known naming conventions:
+Pascal case: The first letter in the identifier and the first letter of each subsequent concatenated word are capitalized. For example: BackColor
+Camel case: The first letter of an identifier is lowercase and the first letter of each subsequent concatenated word is capitalized. For example: backColor
+
+->Which is a correct rule for naming a variable? Cannot start with a number
+
+
+Case-Sensitivity
+
+
+C++ is case-sensitive, which means that an identifier written in uppercase is not equivalent to another one with the same name in lowercase.
+For example, myvariable is not the same as MYVARIABLE and not the same as MyVariable.
+These are three different variables.
+
+
+!Choose variable names that suggest the usage, for example: firstName, lastName.
+
+->Which of the following are legal variable names in C++? salary name3_var 
+
+
+
+
+Variable Naming Rules
+
+
+C++ keyword (reserved word) cannot be used as variable names.
+For example, int, float, double, cout cannot be used as a variable name.
+
+
+!There is no real limit on the length of the variable name (depends on the environment), but try to keep your variable names practical and meaningful.
+
+->int var3;
+double salary;
+bool ab_c14;

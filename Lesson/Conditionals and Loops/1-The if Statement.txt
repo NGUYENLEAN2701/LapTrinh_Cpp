@@ -16,3 +16,60 @@ The condition specifies which expression is to be evaluated. If the condition is
 
 
 ->if (test) { }
+
+
+Use relational operators to evaluate conditions.
+
+For example:
+if(7>4){
+   cout << "Yes";
+}
+
+The if statement evaluates the condition (7>4), finds it to be true, and then executes the cout statement.
+If we change the greater operator to a less than operator (7<4), the statement will not be executed and nothing will be printed out.
+
+!A condition specified in an if statement does not require a semicolon.
+
+->int x = 5;
+int y = 3;
+if (x > y) {
+
+  cout << "hi there";
+
+}
+
+Relational Operators
+
+
+>= Lớn hơn hoặc bằng 7>=4 !true
+<= nhỏ hơn hoặc bằng 7<=4 !false
+== bằng 7>=4 !false
+>= Lớn hơn hoặc bằng 7>=4 !true
+
+example:
+
+if(10==10){
+   cout << "Yes";
+}
+-> ==;
+
+->int x = 10;
+
+int y = 8;
+
+if (x != y) {
+
+ cout << "not equal";
+
+}
+
+
+->int a = 98;
+int b = 76;
+if (a > b) {
+  cout << "greatest is " << a << endl;
+}
+
+if (b > a) {
+  cout << "greatest is " << b << endl;
+}

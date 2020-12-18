@@ -1,0 +1,31 @@
+->int x;
+cin >> x;
+if (x > 20) {
+ cout << "x is big" << endl;
+} 
+if (x < 10) {
+ cout << "x is small" << endl;
+}
+
+->int x = 1;
+
+while (x <=5) {
+ cout << "in a loop" << endl;
+ x++;
+}
+
+->for
+ (int x = 0; x < 7; x++) {
+  cout << "in a loop" << endl;
+}
+
+->The switch statement may be an alternative for multiple if statements
+
+->(a||b)&&c is true if c is true and either a or b is true.
+a||b is true if either a or b is true
+
+->int a = 144;
+int b = 33;
+if (a > 12 && b <= 76) {
+  cout << "You rock!" << endl;
+}

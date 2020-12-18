@@ -1,0 +1,79 @@
+Loops
+
+
+A loop repeatedly executes a set of statements until a particular condition is satisfied.
+
+A while loop statement repeatedly executes a target statement as long as a given condition remains true.
+Syntax:
+
+while (condition) {
+   statement(s);
+}
+
+The loop iterates while the condition is true
+
+!At the point when the condition becomes false, program control is shifted to the line that immediately follows the loop.
+
+->while (bacon <= 5) { cout << "text"; }
+
+
+The loop's body is the block of statements within curly braces.
+For example:
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int num = 1;
+    while (num < 6) {
+        cout << "Number: " << num << endl;
+        num = num + 1;
+    }
+
+    return 0;
+}
+
+The example above declares a variable equal to 1 (int num = 1).
+The while loop checks the condition (num < 6), and executes the statements in its body, which increment the value of num by one each time the loop runs.
+
+
+!After the 5th iteration, num becomes 6, and the condition is evaluated to false, and the loop stops running.
+
+->int x = 1;
+
+while (x <= 5) {
+
+ cout << "value is " << x << endl;
+
+ x = x + 1;
+
+}
+
+
+The increment value can be changed. If changed, the number of times the loop is run will change, as well.
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int num = 1;
+    while (num < 6) {
+        cout << "Number: " << num << endl;
+        num = num + 3;
+    }
+
+    return 0;
+}
+
+
+->int bacon = 0;
+
+while (bacon <= 20) {
+
+ cout << "bacon is " << bacon << endl;
+
+ bacon = bacon + 2;
+
+}

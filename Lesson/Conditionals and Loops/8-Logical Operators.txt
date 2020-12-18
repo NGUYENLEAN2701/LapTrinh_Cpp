@@ -1,0 +1,45 @@
+Logical Operators
+
+
+Use logical operators to combine conditional statements and return true or false.
+
+
+&& : and 
+|| : or 
+!  : not 
+
+!In the AND operator, both operands must be true for the entire expression to be true.
+
+->int age = 23;
+int money = 4;
+if (age > 21 && money > 500) {
+ cout << "welcome" << endl;
+}
+The AND Operator
+For example:
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int age = 20;
+    if (age > 16 && age < 60) {
+        cout << "Accepted!" << endl;
+    }
+    return 0;
+}
+In the example above, the logical AND operator was used to combine both expressions.
+!The expression in the if statement evaluates to true only if both expressions are true.
+
+->Both a and b are true
+
+->As many as you want
+
+
+->int age = 26;
+int money = 4;
+if (age > 21 || money > 500) {
+ cout << "welcome" << endl;
+}
+->Either a or b is true
+Both a and b are true 
