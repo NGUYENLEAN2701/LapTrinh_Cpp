@@ -1,0 +1,70 @@
+Tham Số Của Hàm -  Function Parameters
+
+Để hàm sử dụng các đối số... chúng ta cần định nghĩa một tham số cho hàm... với kiểu dữ liệu là kiểu dữ liệu của đối số cần truyền vào hàm...
+Ví dụ: Viết hàm in ra giá trị của số nguyên mà ta truyền vào hàm... 
+----------------------------------------------------------------------------------
+void printSomething(int x) 
+{
+   cout << x;
+}
+----------------------------------------------------------------------------------
+int x: được gọi là tham số của hàm nó sẽ nhận giá trị của đối số truyền vào cho hàm xử lý...
+
+!Các tham số chính thức hoạt động trong hàm tương tự như các biến cục bộ. Chúng được tạo ra khi gọi hàm và bị hủy khi thoát khỏi hàm.
+
+->void printValue (int x){
+  cout << x << endl;
+}
+
+
+Khi các tham số đã được xác định, bạn có thể truyền các đối số tương ứng khi hàm được gọi.
+ví dụ:
+----------------------------------------------------------------------------------
+#include <iostream>
+using namespace std;
+void printSomething(int x) {
+    cout << x;
+}
+int main() {
+    printSomething(42);
+    return 0;
+}
+----------------------------------------------------------------------------------
+Giá trị 42 được truyền cho hàm dưới dạng đối số và được gán cho tham số chính thức của hàm: x .
+
+!Thực hiện thay đổi đối với tham số trong hàm không làm thay đổi đối số.
+
+->void printValue(int x) {
+  cout << x << endl;
+}
+int main(){
+  printValue(20);
+  return 0;
+}
+
+Bạn có thể truyền các đối số khác nhau cho cùng một hàm... 
+Hay có nghĩa là hàm cỏ thể được gọi nhiều lần để sử dụng...
+ví dụ:
+----------------------------------------------------------------------------------
+#include <iostream>
+using namespace std;
+
+int timesTwo(int x) {
+    return x*2;
+}
+
+int main() {
+    cout << timesTwo(8) << endl;
+
+    cout <<timesTwo(5) << endl;
+
+    cout <<timesTwo(42) << endl;
+}
+----------------------------------------------------------------------------------
+
+->int main(){
+  printValue(4);
+  printValue(5);
+  printValue(6);
+  return 0;
+}

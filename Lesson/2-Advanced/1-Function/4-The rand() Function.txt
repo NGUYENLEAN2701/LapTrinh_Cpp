@@ -1,0 +1,112 @@
+Hàm tạo số ngẫu nhiên - The rand() Function
+
+Số Ngẫu Nhiên - Random Numbers
+
+Có thể tạo các số ngẫu nhiên rất hữu ích trong một số trường hợp, bao gồm khi tạo trò chơi, chương trình mô hình thống kê và các sản phẩm cuối tương tự. 
+Trong thư viện chuẩn C ++, bạn có thể truy cập một hàm tạo số ngẫu nhiên giả có tên là rand () . Khi được sử dụng, chúng ta bắt buộc phải bao gồm tiêu đề <cstdlib>
+
+Ví dụ:
+----------------------------------------------------------------------------------
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main() {
+  cout << rand();
+}
+----------------------------------------------------------------------------------
+
+!Ví dụ trên in ra màn hình một số ngẫu nhiên...
+
+->Which header file should you include to use rand() in your program? 
+#include <cstdlib>
+
+Sử dụng vòng lặp for để tạo ra nhiều số ngẫu nhiên hơn:
+----------------------------------------------------------------------------------
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main() {
+    for (int x = 1; x <= 10; x++) {
+        cout << rand() << endl;
+    }
+}
+----------------------------------------------------------------------------------
+->for (int x = 0; x < 13; x++) {
+    cout << rand() << endl;
+}
+
+Sử dụng chia lấy dư '%' để tạo ra số ngẫu nhiên trong khoảng giá trị mong muốn
+ví dụ:
+----------------------------------------------------------------------------------
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main()
+{
+    int min, max;
+    min = 0;
+    max = 99;
+    for (int i = 0; i < 100; i++)
+    {
+        int rand_number = min + (rand() % (max - min + 1));
+        cout << rand_number << endl;
+    }
+    return 0;
+}
+----------------------------------------------------------------------------------
+
+!Tuy nhiên, hàm rand () sẽ chỉ trả về một số ngẫu nhiên giả. Điều này có nghĩa là mỗi lần mã được chạy, nó sẽ tạo ra các số giống nhau.
+
+->cout << 1 + ( rand() % 9 ) << endl;
+
+
+Hàm srand()
+
+Hàm srand () được sử dụng để tạo các số thực sự ngẫu nhiên.
+Hàm này cho phép chỉ định một giá trị hạt giống làm tham số của nó, được sử dụng cho thuật toán của hàm rand () .
+----------------------------------------------------------------------------------
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main () {
+    srand(98);
+
+    for (int x = 1; x <= 10; x++) {
+        cout << 1 + (rand() % 6) << endl;
+    }
+}
+----------------------------------------------------------------------------------
+
+!Thay đổi giá trị truyền vào srand() sẽ thay đổi kết quả trả về của hàm rand (). Tuy nhiên, cùng một đối số sẽ cho ra cùng một kết quả.
+
+->What does the srand() function do? Helps to generate truly random numbers
+
+
+Tạo Số Thực Sự Ngẫu Nhiên Trong C++ - Truly Random Numbers
+
+Một giải pháp để tạo ra các số thực sự ngẫu nhiên là sử dụng thời gian hiện tại làm giá trị gốc cho hàm srand ().
+Ví dụ này sử dụng hàm time () để lấy số giây trên thời gian hệ thống của bạn và tạo ngẫu nhiên hàm rand () (chúng ta cần bao gồm tiêu đề <ctime> cho nó):
+----------------------------------------------------------------------------------
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main () {
+    srand(time(0));
+    for (int x = 1; x <= 10; x++) {
+        cout << 1 + (rand() % 6) << endl;
+    }
+}
+----------------------------------------------------------------------------------
+
+time (0) sẽ trả về số đếm giây hiện tại, nhắc hàm srand () đặt một hạt giống khác cho hàm rand () mỗi khi chương trình chạy.
+
+!Sử dụng giá trị hạt giống này sẽ tạo ra một đầu ra khác nhau mỗi khi chúng ta chạy chương trình.
+
+->srand( time(0) );
+cout << 1 + (rand() % 15) << endl;

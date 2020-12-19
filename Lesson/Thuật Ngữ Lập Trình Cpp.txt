@@ -74,3 +74,6 @@ columns: cột
 ampersand: dấu &
 prototypes: nguyên mẫu
 declaration: khai báo
+arguments: đối số
+parameters: tham số
+result: kết quả

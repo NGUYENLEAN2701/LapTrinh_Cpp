@@ -1,0 +1,134 @@
+Hàm - Functions
+
+Hàm là một tập hợp các câu lệnh thực hiện một nhiệm cụ thể trong chương trình.
+
+Ưu điểm khi sử dụng hàm:
+
+    _Tái sử dụng
+    _Dễ Quản lý
+    _Dể bảo trì, thay đổi...  
+    _1 Hàm có thể dùng cho nhiều đầu vào khác nhau...
+
+!Mọi chương trình C++ đều ít nhất có 1 hàm main()... -> có chức năng là chạy chương trình
+
+->Every C++ program starts with the function: main
+
+
+Kiểu Dữ Liệu Trả Về - The Return Type 
+
+Hàm main có dạng tổng quát:
+----------------------------------------------------------------------------------
+int main()
+{
+  // some code
+  return 0;
+}
+----------------------------------------------------------------------------------
+^--Trong hàm trên kiểu trả về là int sẽ đứng trước tên của hàm main() 
+Nếu ko cần giá trị trả về khi hàm hoàn thành nhiệm vụ thì dùng keyword-void
+
+example: void main(){//code}
+
+!void là một kiểu dữ liệu cơ bản xác định trạng thái vô giá trị...
+
+
+->void | khi ta không muốn hàm trả về bất cứ kết quả nào...
+
+
+Thành Lập Một Hàm - Defining a Function
+
+Cấu trúc của một hàm: 
+----------------------------------------------------------------------------------
+return_type function_name(Data_Type1 parameter1, Data_Type2 parameter2,...)
+{
+   body of the function
+}
+----------------------------------------------------------------------------------
+return-type: kiểu dữ liệu trả về
+function name: tên của Hàm
+Data_Type: kiểu dữ liệu tham số 
+parameter: tham số truyền vào Hàm
+body of the function: các dòng lệnh của Hàm
+
+
+!Tham số trong Hàm là tùy chọn... Có thể thành lập một Hàm mà ko cần có tham số truyền vào...
+
+->A C++ function consists of: Return type, function name, parameters, and a body
+
+Một ví dụ thành lập Hàm mà ko cần giá trị trả về...
+Hàm có chức năng in ra màn hình dòng "Hi there!"...
+----------------------------------------------------------------------------------
+void Say_HiThere!() 
+{
+  cout << "Hi there!";
+}
+----------------------------------------------------------------------------------
+Hàm này ko có, giá trị trả về và cả tham số truyền vào...
+Chúng ta cần dùng hàm main để gọi nó...
+----------------------------------------------------------------------------------
+int main(){
+    Say_HiThere();
+    return 0;
+}
+----------------------------------------------------------------------------------
+
+!Để gọi một hàm, bạn chỉ cần chuyển các tham số cần thiết cùng với tên hàm...
+
+->void my_func(){
+ cout << "I am a function" << endl;
+}
+
+
+Bạn phải khai báo một Hàm trước khi gọi nó...
+Ví dụ:
+----------------------------------------------------------------------------------
+#include <iostream>
+using namespace std;
+void printSomething() {
+    cout << "Hi there!";
+}
+int main() {
+    printSomething();
+    return 0;
+}
+----------------------------------------------------------------------------------
+
+!nếu bạn khai báo Hàm sau hàm main() thì chương trình sẽ bị lỗi...
+
+->A function must be declared: Before its call
+
+Khai báo tên Hàm bắt buộc phải ở trước hàm main... tuy nhiên phần thân của hàm thì có thể chuyển về phía sau hàm main... 
+
+Ví dụ: 
+----------------------------------------------------------------------------------
+#include <iostream>
+using namespace std;
+
+//Function declaration
+void printSomething();
+
+int main() {
+    printSomething();
+}
+
+//Function definition
+void printSomething() {
+    cout << "Hi there!";
+}
+----------------------------------------------------------------------------------
+
+!hoặc ta có thể viết hàm hoàn toàn ở một thư viện khác (file my_library.h)
+
+->void some_func();
+int main(){
+
+  some_func();
+
+  return 0;
+
+}
+void some_func() {
+
+  cout << "it works!" << endl;
+
+}
