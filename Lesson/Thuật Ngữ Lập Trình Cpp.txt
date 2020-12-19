@@ -72,3 +72,5 @@ elements: nhiều phần tử
 rows: hàng
 columns: cột
 ampersand: dấu &
+prototypes: nguyên mẫu
+declaration: khai báo

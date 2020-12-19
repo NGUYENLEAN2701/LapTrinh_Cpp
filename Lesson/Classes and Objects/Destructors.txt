@@ -1,0 +1,58 @@
+Destructors
+
+Remember constructors? They're special member functions that are automatically called when an object is created.
+Destructors are special functions, as well. They're called when an object is destroyed or deleted.
+
+!Objects are destroyed when they go out of scope, or whenever the delete expression is applied to a pointer directed at an object of a class.
+
+
+->Constructor runs when an object is created; destructor runs when it is deleted
+
+The name of a destructor will be exactly the same as the class, only prefixed with a tilde (~). A destructor can't return a value or take any parameters.
+
+class MyClass {
+  public: 
+    ~MyClass() {
+     // some code
+    }
+};
+
+!Destructors can be very useful for releasing resources before coming out of the program. This can include closing files, releasing memory, and so on.
+
+
+For example, let's declare a destructor for our MyClass class, in its header file MyClass.h:
+
+class MyClass
+{
+  public:
+   MyClass();
+   ~MyClass();
+};
+
+!Declare a destructor for our MyClass class.
+
+After declaring the destructor in the header file, we can write the implementation in the source file MyClass.cpp:
+
+#include "MyClass.h"
+#include <iostream>
+using namespace std;
+
+MyClass::MyClass()
+{
+  cout<<"Constructor"<<endl;
+}
+
+MyClass::~MyClass()
+{
+  cout<<"Destructor"<<endl;
+}
+
+!Note that we included the <iostream> header, so that we can use cout.
+
+
+Since destructors can't take parameters, they also can't be overloaded.
+Each class will have just one destructor.
+
+!Defining a destructor is not mandatory; if you don't need one, you don't have to define one.
+
+
