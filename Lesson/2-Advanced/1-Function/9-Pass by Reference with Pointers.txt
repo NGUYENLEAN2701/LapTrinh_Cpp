@@ -33,9 +33,28 @@ int main()
 ----------------------------------------------------------------------------------
 
 !mặc định, c++ sử dụng tham trị để truyền đối số... 
+!Chú ý để truyền Tham Chiếu ta cần sử dụng tham số con trỏ và dấu '&' cho đối số.
+
 
 ->What are the two different ways to pass arguments into functions?
 Pass by reference and pass by value
 
 
 ->Pass the copy of the variable as the argument
+
+
+->void passByValue(int x) {
+    x = 99;
+}
+
+int main(){
+  int arg = 13;
+  passByValue(arg);
+  return 0;
+}
+
+
+!Nói chung, truyền giá trị nhanh hơn và hiệu quả hơn. Truyền qua tham chiếu khi hàm của bạn cần sửa đổi đối số hoặc khi bạn cần chuyển một kiểu dữ liệu, sử dụng nhiều bộ nhớ và tốn kém để sao chép.
+
+->A function taking an argument by reference:
+Can modify the actual variable passed to it

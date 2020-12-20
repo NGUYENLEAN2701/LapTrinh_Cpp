@@ -1,0 +1,53 @@
+Đối Tượng là gì? - What is an Object?
+
+Lập trình Hướng Đối Tượng là một phong cách lập trình nhằm mục đích làm cho suy nghĩ về lập trình gần với suy nghĩ về thế giới thực. 
+Trong lập trình, các đối tượng là các đơn vị độc lập, và mỗi đơn vị có bản sắc riêng , giống như các đối tượng trong thế giới thực.
+
+!Quả táo là một đồ vật; một cái cốc cũng vậy. Mỗi cái đều có bản sắc riêng . Có thể có hai chiếc cốc trông giống hệt nhau, nhưng chúng vẫn là những vật thể riêng biệt, duy nhất.
+
+->An object has: An identity
+
+
+Một đối tượng có thể chứa các đối tượng khác nhưng chúng vẫn là các đối tượng khác nhau. 
+
+Đối tượng cũng có các đặc điểm được sử dụng để mô tả chúng. Ví dụ, một chiếc ô tô có thể có màu đỏ hoặc xanh lam, một cái cốc có thể đầy hoặc rỗng, v.v. Những đặc điểm này còn được gọi là thuộc tính . Một thuộc tính mô tả trạng thái hiện tại của một đối tượng.
+
+Các đối tượng có thể có nhiều thuộc tính (cốc có thể rỗng , màu đỏ và lớn ).
+
+!An object's state is independent of its type; a cup might be full of water, another might be empty.
+- Trạng thái của một đối tượng độc lập với kiểu của nó; một cốc có thể đầy nước, cốc khác có thể rỗng.
+
+->An attribute describes: The current state of an object
+
+Trong thế giới thực, mỗi đối tượng hành xử theo cách riêng của nó. Xe di chuyển , điện thoại đổ chuông , vân vân.
+Điều tương tự cũng áp dụng cho các đối tượng - hành vi dành riêng cho loại đối tượng.
+
+!Vì vậy, ba chiều sau mô tả bất kỳ đối tượng nào trong lập trình hướng đối tượng: danh tính - identity , thuộc tính - attributes , hành vi - behavior.
+
+->What are the three things that describe an object in object-oriented programming language?  Identity, attributes, behavior
+
+
+
+Trong lập trình, một đối tượng là tự chứa , với bản sắc riêng của nó . Nó tách biệt với các đối tượng khác.
+Mỗi đối tượng có các thuộc tính riêng , mô tả trạng thái hiện tại của nó. 
+Mỗi hành vi thể hiện hành vi của riêng mình , thể hiện những gì chúng có thể làm.
+
+Person Object:
+-name:"John"
+-age: 25
+talk()
+
+Car Object:
+-color: red
+-year: 2015
+start()
+stop()
+horn()
+
+Trong máy tính, các đối tượng không phải lúc nào cũng đại diện cho các mục vật chất.
+Ví dụ, một đối tượng lập trình có thể đại diện cho một ngày, một giờ, một tài khoản ngân hàng. 
+Tài khoản ngân hàng không hữu hình; bạn không thể nhìn thấy nó hoặc chạm vào nó, nhưng nó vẫn là một đối tượng được xác định rõ ràng - nó có danh tính , thuộc tính và hành vi riêng .
+
+->In regard to objects, which two of the following statements are true?
+Object are not always physical items
+Object are not always visible items

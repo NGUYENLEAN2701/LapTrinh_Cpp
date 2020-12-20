@@ -1,0 +1,36 @@
+->Which function always begins C++ programs? main
+
+->void printIt(){
+ cout << "I love C++" << endl;
+}
+int main(){
+ printIt();
+ return 0;
+}
+
+->void myFunction(int x){
+ cout << x << endl;
+}
+
+->double sum(double x,double y, double z){
+ return x + y + z;
+}
+int main(){
+ double a = 1.2;
+ double b = 2.3;
+ double c = 3.4;
+ cout << sum(a, b, c);
+ return 0;
+}
+
+->void myFunction(int a = 1, int b = 2){
+ cout << a * b << endl;
+}
+
+->void calcSum(int arr[], int size){
+ int sum = 0;
+ for (int x = 0; x < size; x++) { 
+   sum += arr[x];
+ }
+ cout << sum << endl;
+}

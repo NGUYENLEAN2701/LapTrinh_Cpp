@@ -79,3 +79,6 @@ parameters: tham số
 result: kết quả
 Overloading: quá tải
 Reference: tham chiếu
+identity: bản sắc, danh tính...
+attributes: thuộc tính
+behavior: hành vi
