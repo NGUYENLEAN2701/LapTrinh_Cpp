@@ -77,3 +77,5 @@ declaration: khai báo
 arguments: đối số
 parameters: tham số
 result: kết quả
+Overloading: quá tải
+Reference: tham chiếu

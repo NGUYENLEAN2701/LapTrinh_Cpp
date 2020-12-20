@@ -1,0 +1,39 @@
+Đệ Quy - Recursion
+
+Một hàm đệ quy trong C ++ là một hàm gọi chính nó.
+
+!Để tránh việc đệ quy chạy vô thời hạn, bạn phải bao gồm điều kiện kết thúc.
+
+->The idea of the recursion is: A function calls itself
+
+Để chứng minh đệ quy, hãy tạo một chương trình để tính giai thừa của một số.
+Trong toán học, thuật ngữ giai thừa dùng để chỉ tích của tất cả các số nguyên dương nhỏ hơn hoặc bằng một số nguyên không âm cụ thể (n). Giai thừa của n được ký hiệu là n!
+Ví dụ: 4!=4*3*2*1=24
+
+!Đệ quy là một phương pháp giải quyết một vấn đề trong đó giải pháp phụ thuộc vào các giải pháp cho các trường hợp nhỏ hơn của cùng một vấn đề.
+
+->What is the factorial of 5? 5!=5*4*3*2*1
+
+
+Thành lập hàm tính giai thừa:
+----------------------------------------------------------------------------------
+int factorial(int n){
+    if(n==0) return 1;
+    else return n*factorial(n-1);
+}
+----------------------------------------------------------------------------------
+
+!Hàm giai thừa gọi chính nó, và sau đó tiếp tục làm như vậy, cho đến khi đối số bằng 0.
+
+->int fact(int x) {
+ if (x == 1) { 
+     return 1;
+ } else {
+     return x * fact(x - 1);
+ }
+}
+
+Một tên khác của điều kiện thoát là trường hợp cơ sở .
+!Hãy nhớ rằng một trường hợp cơ sở là cần thiết cho đệ quy thực. Nếu không có nó, đệ quy sẽ tiếp tục chạy mãi mãi.
+
+->A real recursive function should have: A base case

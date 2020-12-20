@@ -1,0 +1,25 @@
+Mảng và Hàm - Arrays and Functions
+
+Một mảng cũng có thể được truyền cho một hàm như một đối số.
+Tham số phải được định nghĩa là một mảng sử dụng dấu ngoặc vuông khi khai báo hàm.
+ví dụ:
+----------------------------------------------------------------------------------
+#include <iostream>
+using namespace std;
+
+void printArray(int arr[], int size) {
+  for(int x = 0; x < size; x++) {
+    cout << arr[x];
+  }
+}
+int main() {
+  int arr[] = {1, 2, 3, 4, 5};
+  printArray(arr, sizeof(arr) / sizeof(arr[0]));
+}
+----------------------------------------------------------------------------------
+
+->void printArray(int arr[], int size);
+
+!Hãy nhớ chỉ định tên của mảng mà không có dấu ngoặc vuông khi chuyển nó làm đối số cho một hàm.
+
+->printArray(my_arr, 3); // calling printArray

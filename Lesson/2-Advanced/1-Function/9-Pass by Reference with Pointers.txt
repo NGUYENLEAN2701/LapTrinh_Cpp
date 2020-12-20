@@ -1,0 +1,41 @@
+Dối Số Của Hàm - Function Arguments
+
+Có 2 cách để truyền vào đối số khi sử dụng hàm...
+
+_Truyền vào Tham Trị... có nghĩa là truyền giá trị của đối số vào tham số của hàm... và mọi thay đổi của giá trị này hoàn toàn ko ảnh hướng tới đối số bên ngoài hàm... 
+_Truyền vào Tham Chiếu... có nghĩa là truyền chính đối số đó vào tham số của hàm và khi đó ta thao tác trên tham số có thể làm thay đổi giá trị của đối số khi ra khỏi hàm...
+
+ví dụ:
+----------------------------------------------------------------------------------
+#include <iostream>
+using namespace std;
+void swap(int a, int b)
+{
+    int c = a;
+    a = b;
+    b = c;
+}
+void swap(int *a, int *b)
+{
+    int c = *a;
+    *a = *b;
+    *b = c;
+}
+int main()
+{
+    int a = 0, b = 1;
+    swap(a, b);
+    cout << a << " " << b << endl;//no changed!
+    swap(&a, &b);
+    cout << a << " " << b << endl;//changed!
+    return 0;
+}
+----------------------------------------------------------------------------------
+
+!mặc định, c++ sử dụng tham trị để truyền đối số... 
+
+->What are the two different ways to pass arguments into functions?
+Pass by reference and pass by value
+
+
+->Pass the copy of the variable as the argument

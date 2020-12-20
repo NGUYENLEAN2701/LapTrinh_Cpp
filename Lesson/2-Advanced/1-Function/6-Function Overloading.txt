@@ -1,0 +1,70 @@
+Quá Tải - Overloading
+
+Chức năng quá tải cho phép tạo ra nhiều hàm cùng tên nhưng có tham số khác nhau về kiểu dữ liệu.
+Ví Dụ:
+----------------------------------------------------------------------------------
+void printNumber ( int a) { 
+ 
+  cout << a;
+}
+void printNumber ( float a) { 
+ 
+  cout << a;
+}
+----------------------------------------------------------------------------------
+!bây giờ hàm printNumber() sẽ hoạt động với cả int và float...
+
+->void printNumber(int x) {
+ cout << "integer is " << x << endl;
+}
+void printNumber(float x) {
+ cout << "float is " << x << endl;
+}
+
+
+Khi dùng quá tải phải thỏa mãn điều kiện: 
+     _khác về kiểu dữ liệu của tham số
+hoặc:_khác về số lượng tham Số
+
+ví dụ:
+----------------------------------------------------------------------------------
+#include <iostream>
+using namespace std;
+
+void printNumber(int x) {
+    cout << "Prints an integer: " << x << endl;
+}
+void printNumber(float x) {
+    cout << "Prints a float: " << x << endl;
+}
+void printNumber(int x, int y) {
+    cout << "Prints two int: " << x << " , "<< y << endl;
+}
+int main() {
+    int a = 16, c =20;
+    float b = 54.541;
+    printNumber(a);
+    printNumber(b);
+    printNumber(a,c);
+}
+----------------------------------------------------------------------------------
+
+->When are two functions with the same name called overloaded?
+If they have different number or type of parameter
+
+
+Tuy nhiên kiểu trả về của nhiều hàm cùng tên chỉ được phép có duy nhất 1 kiểu dữ liệu...
+ví dụ:
+----------------------------------------------------------------------------------
+int printName(int a) { }
+float printName(int b) { }
+double printName(int c) { }
+---->error!<----------------------------------------------------------------------
+
+
+->void sum(int a, int b) {
+ cout << a + b << endl;
+}
+void sum(float a, float b) {
+ cout << a + b << endl;
+}
