@@ -1,0 +1,48 @@
+Lớp là gì? - What is a Class?
+
+Objects được tạo bằng cách sử dụng Classes... 
+Classes chính là trọng điểm của đối tượng... 
+Classes mô tả đối tượng sẽ là gì, nhưng tách biệt với chính đối tượng. 
+Nói cách khác, một class có thể được xem như một bản thiết kế, mô tả hoặc định nghĩa của một đối tượng .
+Bạn có thể sử dụng cùng một lớp làm bản thiết kế để tạo nhiều đối tượng khác nhau.
+
+Ví dụ, để chuẩn bị tạo ra một tòa nhà mới, kiến ​​trúc sư tạo ra một bản thiết kế, được sử dụng làm cơ sở để thực sự xây dựng cấu trúc. Cùng một bản thiết kế đó có thể được sử dụng để tạo nhiều tòa nhà.
+
+Lập trình hoạt động theo cùng một kiểu.
+Đầu tiên chúng ta định nghĩa một lớp, lớp này trở thành bản thiết kế để tạo các đối tượng.
+Mỗi lớp có một tên và mô tả các thuộc tính và hành vi ...
+
+Trong lập trình, kiểu thuật ngữ được sử dụng để chỉ tên lớp: Chúng tôi đang tạo một đối tượng của một kiểu cụ thể .
+
+
+!Attributes are also referred to as properties or data.
+
+->In regard to classes, which statement is true?
+A class has a name and describes attributes and behavior of an object
+
+
+Phương Thức - Methods
+
+Phương thức là một thuật ngữ khác để chỉ hành vi của một lớp. 
+Một phương thức về cơ bản là một hàm thuộc về một lớp.
+
+!Các phương thức tương tự như các hàm - chúng là các khối mã được gọi và chúng cũng có thể thực hiện các hành động và trả về giá trị.
+
+->What is a method?
+A method is a function declared in a class
+
+
+Ví dụ về một class:
+
+name: BankAccount
+attributes: accountNumber, balance, dateOpened
+behavior: open(), close(), deposit()
+
+Lớp chỉ định rằng mỗi đối tượng nên có các thuộc tính và hành vi được xác định. Tuy nhiên, nó không chỉ rõ dữ liệu thực tế là gì; nó chỉ cung cấp một định nghĩa. Khi đã viết xong lớp, chúng ta có thể tiếp tục tạo các đối tượng dựa trên lớp đó. Mỗi đối tượng được gọi là một thể hiện của một lớp. 
+Quá trình tạo đối tượng được gọi là khởi tạo .
+
+!Each object has its own identity, data, and behavior.
+
+
+->The process of creating objects is called...
+instantiation

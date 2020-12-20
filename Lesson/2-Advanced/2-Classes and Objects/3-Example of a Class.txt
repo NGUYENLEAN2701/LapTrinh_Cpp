@@ -1,0 +1,61 @@
+Khai báo một Lớp - Declaring a Class
+
+Bắt đầu định nghĩa lớp của bạn với lớp từ khóa . 
+Theo từ khóa với tên lớp và nội dung lớp, được đặt trong một tập hợp các dấu ngoặc nhọn.
+Đoạn mã sau khai báo một lớp được gọi là BankAccount :
+----------------------------------------------------------------------------------
+class BankAccount {
+
+};
+----------------------------------------------------------------------------------
+
+!Định nghĩa lớp phải được theo sau bởi dấu chấm phẩy .
+
+
+->Type in the keyword used to declare a class: class
+
+
+Để lớp hoàn thiện cần thêm:
+
+    _attribute : thuộc tính
+    _behavior : hành vi
+
+    -access specifier : chỉ định truy cập với 3 lựa chọn... 
+        1.public : có thể truy cập dữ liệu này trực tiếp từ bên ngoài
+        2.private : ko thể truy cập trực tiếp từ bên ngoài mà cần thông qua
+                    phương thức của lớp
+        3.protected : dữ liệu được bảo vệ và cũng ko thể truy cập trực tiếp...
+
+
+->What is the public keyword called? an access specifier
+
+
+Tạo một Lớp - Creating a Class
+
+ví dụ:
+----------------------------------------------------------------------------------
+#include <iostream>
+using namespace std;
+
+class BankAccount{
+public:
+    void sayHi()    {
+        cout << "Hi" << endl;
+    }
+};
+int main(){
+    BankAccount test;
+    test.sayHi();
+}
+----------------------------------------------------------------------------------
+
+!Chúng ta phải khai báo một lớp trước khi sử dụng nó, giống như chúng ta làm với các hàm.
+
+->class MyClass{
+    public:
+    void someFunction() { 
+        cout << "hi from MyClass" << endl;
+    }
+};
+
+
