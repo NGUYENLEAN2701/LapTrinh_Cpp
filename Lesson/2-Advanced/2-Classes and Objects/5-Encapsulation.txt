@@ -1,0 +1,34 @@
+Đóng Gói - Encapsulation
+
+Một phần ý nghĩa của từ đóng gói là ý tưởng "bao quanh" một thực thể, không chỉ để giữ những gì bên trong lại với nhau mà còn để bảo vệ nó.
+
+Trong hướng đối tượng, đóng gói không chỉ đơn giản là kết hợp các thuộc tính và hành vi với nhau trong một lớp; nó cũng có nghĩa là hạn chế quyền truy cập vào các hoạt động bên trong của lớp đó. 
+
+Nguyên tắc quan trọng ở đây là một đối tượng chỉ tiết lộ những gì mà các thành phần ứng dụng khác yêu cầu để chạy ứng dụng một cách hiệu quả. Tất cả những thứ khác được giữ ngoài tầm nhìn.
+
+!Đây được gọi là ẩn dữ liệu .
+
+
+->Encapsulation allows you to:Hide details of a class realization
+
+
+Ví dụ: 
+nếu chúng tôi sử dụng lớp BankAccount của mình, chúng tôi không muốn một số phần khác trong chương trình của chúng tôi tiếp cận và thay đổi số dư của bất kỳ đối tượng nào mà không thực hiện hành vi gửi tiền () hoặc rút tiền () .
+
+Chúng ta nên ẩn thuộc tính đó, kiểm soát quyền truy cập vào nó, vì vậy nó chỉ có thể truy cập bởi chính đối tượng.
+
+Bằng cách này, số dư không thể thay đổi trực tiếp từ bên ngoài của đối tượng và chỉ có thể truy cập bằng cách sử dụng các phương thức của nó.
+
+Đây còn được gọi là " quyền anh đen ", dùng để chỉ việc đóng các vùng hoạt động bên trong của đối tượng, ngoại trừ các phần mà chúng ta muốn công khai.
+
+Điều này cho phép chúng ta thay đổi các thuộc tính và thực thi các phương thức mà không làm thay đổi chương trình tổng thể. Ví dụ: chúng tôi có thể quay lại sau và thay đổi kiểu dữ liệu của thuộc tính số dư .
+
+Tóm lại, lợi ích của việc đóng gói là:
+- Kiểm soát cách dữ liệu được truy cập hoặc sửa đổi.
+- Code linh hoạt hơn và dễ thay đổi theo yêu cầu mới.
+- Thay đổi một phần của mã mà không ảnh hưởng đến phần khác của mã.
+
+->The idea of encapsulation is (select two):
+To hide everything about the object, only exposing what is necessary
+To encapsulation an object's attributes and method
+

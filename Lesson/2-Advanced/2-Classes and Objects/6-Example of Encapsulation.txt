@@ -1,0 +1,157 @@
+Chỉ Định Truy Cập - Access Specifiers
+
+Các chỉ định truy cập được sử dụng để đặt các cấp độ truy cập cho các thành viên cụ thể của lớp.
+
+Ba cấp độ của các chỉ định truy cập là công khai - public , được bảo vệ - protected và riêng tư - private . Một thành viên công cộng có thể truy cập từ bên ngoài lớp và bất cứ nơi nào trong phạm vi của đối tượng lớp. 
+Ví dụ:
+--------------------------------------------------------------------
+#include <iostream>
+#include <string>
+using namespace std;
+
+class myClass {
+    public:
+        string name;
+};
+
+int main() {
+    myClass myObj;
+    myObj.name = "SoloLearn";
+    cout << myObj.name;
+
+    return 0;
+}
+--------------------------------------------------------------------
+
+Thuộc tính 'name' là công khai nên có thể truy cập trực tiếp từ bên ngoài lớp...
+
+!Các sửa đổi Access chỉ cần được khai báo một lần; nhiều thành viên có thể tuân theo một công cụ sửa đổi quyền truy cập duy nhất.
+Lưu ý dấu hai chấm (:) theo sau từ khóa public .
+
+->#include <iostream>
+#include <string>
+
+class MyClass{
+ public: 
+  string myData;
+};
+int main(){
+    MyClass obj;
+    obj.myData = "I love C++";
+}
+
+
+Riêng tư - private
+
+Một thành viên riêng tư không thể được truy cập, hoặc thậm chí bị xem, từ bên ngoài lớp; nó chỉ có thể được truy cập từ trong lớp.
+
+Một chức năng thành viên công cộng có thể được sử dụng để truy cập các thành viên riêng tư . 
+Ví dụ:
+--------------------------------------------------------------------
+#include <iostream>
+#include <string>
+using namespace std;
+
+class myClass {
+    public:
+        void setName(string x) {
+            name = x;
+        }
+        void PrintName() {
+            cout << name << endl;;
+        }
+    private:
+        string name;
+};
+
+int main() {
+    myClass myObj;
+    myObj.setName("John");
+    myObj.PrintName();
+    return 0;
+}
+--------------------------------------------------------------------
+Thuộc tính tên là private nên ko thể truy cập trực tiếp từ bên ngoài mà phải thông qua các hàm được định nghĩa trong class
+
+!Nếu không có định nghĩa truy cập nào được xác định, tất cả các thành viên của một lớp được đặt thành riêng tư theo mặc định.
+
+
+->class MyClass{
+private:
+ int myData;
+public:
+ void setMyData(int arg) {  
+    myData = arg;
+ }
+};
+
+
+Chúng ta cũng có thể thêm vào phương thức để lấy dữ liệu từ private
+--------------------------------------------------------------------
+class myClass {
+  public:
+    void setName(string x) {
+      name = x;
+    }
+    string getName() {
+      return name;
+    }
+  private:
+    string name;
+};
+--------------------------------------------------------------------
+
+!Phương thức getName () trả về giá trị của thuộc tính private 'name'.
+
+->class MyClass{
+private:
+ int myData;
+public:
+ int getMyData() {
+    return
+    myData;
+ }
+};
+
+
+
+Một chương trình hoàn chỉnh:
+--------------------------------------------------------------------
+#include <iostream>
+#include <string>
+using namespace std;
+
+class myClass {
+    public:
+        void setName(string x) {
+            name = x;
+        }
+        string getName() {
+            return name;
+        }
+    private:
+        string name;
+};
+
+int main() {
+    myClass myObj;
+    myObj.setName("John");
+    cout << myObj.getName();
+
+    return 0;
+}
+--------------------------------------------------------------------
+
+Chúng tôi đã sử dụng tính năng đóng gói để ẩn thuộc tính 'name' khỏi mã bên ngoài. Sau đó, chúng tôi cung cấp quyền truy cập vào nó bằng các phương pháp công khai. Dữ liệu lớp của chúng ta chỉ có thể được đọc và sửa đổi thông qua các phương thức đó.
+
+!Điều này cho phép thay đổi việc triển khai các phương thức và thuộc tính mà không ảnh hưởng đến mã bên ngoài.
+
+->int main(){
+ MyClass obj;
+ obj.setMyData(14);
+
+ cout << 
+obj
+.getMyData() << endl;
+}
+

@@ -1,0 +1,32 @@
+->Which statement is true? 
+An object is an instance of a class.
+
+->The three terms used to describe an object in object-oriented programming are attributes, behavior, and: identity
+
+->How many functions (methods) can a class have? 
+As many as you want
+
+->What are the public and private keywords called?
+Access specifiers
+
+->class Student{
+public:
+  void hello() {
+    cout << "hi from student" << endl; 
+  }
+};
+
+->class Student {
+private:
+ int age;
+public:
+ Student(int a) { 
+   setAge(a); 
+ }
+ void setAge(int a) { 
+   age = a; 
+ }
+int getAge() {
+ return age; 
+ }
+};

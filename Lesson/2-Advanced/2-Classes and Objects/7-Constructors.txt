@@ -1,0 +1,110 @@
+Hàm khởi tạo - Constructors
+
+Đây là thành phần đặc biệt khi định nghĩa class... những lệnh trong hàm này luôn luôn được chạy mỗi khi ta dùng class để khởi tạo một đối tượng mới... 
+
+chú y là hàm Constructors hoàn toàn ko có kiểu trả về kể cả 'void' phía trước tên hàm... 
+
+ví dụ:
+--------------------------------------------------------------------
+#include <iostream>
+using namespace std;
+
+class myClass {
+    public:
+        myClass() {
+            cout <<"Hey";
+        }
+        void setName(string x) {
+            name = x;
+        }
+        string getName() {
+            return name;
+        }
+    private:
+        string name;
+};
+
+int main() {
+    myClass myObj;
+
+    return 0;
+}
+--------------------------------------------------------------------
+
+!Bây giờ, khi tạo một đối tượng kiểu myClass , hàm khởi tạo sẽ tự động được gọi.
+
+->When is the constructor called? When a class object is created
+
+
+
+Các hàm tạo có thể rất hữu ích để thiết lập các giá trị ban đầu cho các biến thành viên nhất định.
+Một hàm tạo mặc định không có tham số. Tuy nhiên, khi cần, các tham số có thể được thêm vào một hàm tạo. Điều này giúp bạn có thể gán giá trị ban đầu cho một đối tượng khi nó được tạo, như được minh họa trong ví dụ sau:
+--------------------------------------------------------------------
+class myClass {
+  public:
+    myClass(string nm) {
+      setName(nm);
+    }
+    void setName(string x) {
+      name = x;
+    }
+    string getName() {
+      return name;
+    }
+  private:
+    string name;
+};
+--------------------------------------------------------------------
+
+!Chúng tôi đã định nghĩa một phương thức khởi tạo, nhận một tham số và gán nó cho thuộc tính name bằng phương thức setName() .
+
+->class my_class{
+private:
+ int my_data;
+public: 
+ my_class(int arg) { 
+  my_data = arg;
+ }
+};
+
+Khi tạo một đối tượng, bây giờ bạn cần truyền tham số của hàm tạo, như khi gọi một hàm:
+--------------------------------------------------------------------
+#include <iostream>
+using namespace std;
+
+class myClass {
+    public:
+        myClass(string nm = "no_name") {
+            setName(nm);
+        }
+        void setName(string x) {
+            name = x;
+        }
+        string getName() {
+            return name;
+        }
+    private:
+        string name;
+};
+
+int main() {
+    myClass ob1("David");
+    myClass ob2;
+    cout << ob1.getName();
+    cout << ob2.getName();
+}
+--------------------------------------------------------------------
+
+!Nếu ta dùng hàm tạo cần truyền vào tham số của hàm... thì ta bắt buộc phải có đối số khi tạo đối tượng... nếu ko sẽ có lỗi... hoặc ta có thể dùng giá trị mặc định cho tham số...
+
+->class MyClass {
+private:
+ int myData;
+public:
+ MyClass(int arg) {
+  myData = arg;
+ }
+};
+int main() {
+ MyClass obj(14);
+}

@@ -1,0 +1,9 @@
+Tạo một class mới - Creating a New Class
+
+trong thực tế khi lập trình chúng ta sẽ để các class ở một file khác với file chứa hàm main để dễ quản lý... 
+Tương tự các thư viện ta thêm vào phần đầu của chương trình...
+
+Tuy nhiên khi ta sử dụng các ide khác nhau để lập trình thì cách tạo file sẽ ko giống nhau...
+
+Phần ví dụ cho codeblock và visual studio sẽ thêm vào ở thư mục code example....!
+

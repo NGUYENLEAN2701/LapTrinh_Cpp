@@ -1,3 +1,36 @@
 Tính Trừu Tượng - Abstraction
 
+Trừu tượng hóa dữ liệu là khái niệm chỉ cung cấp thông tin cần thiết cho thế giới bên ngoài. Đó là một quá trình thể hiện các tính năng cần thiết mà không bao gồm chi tiết triển khai .
+
+Một ví dụ điển hình trong thế giới thực là một cuốn sách : Khi bạn nghe đến thuật ngữ sách, bạn không biết chi tiết cụ thể chính xác, tức là: số trang, màu sắc, kích thước, nhưng bạn hiểu ý tưởng của một cuốn sách - sự trừu tượng của quyển sách.
+
+Khái niệm trừu tượng là chúng ta tập trung vào những phẩm chất thiết yếu, thay vì những đặc điểm cụ thể của một ví dụ cụ thể.
+
+
+->What does abstraction mean?
+focus on the essential qualities of something
+
+
+Trừu tượng nghĩa là chúng ta có thể có một ý tưởng hoặc một khái niệm hoàn toàn tách biệt với bất kỳ trường hợp cụ thể nào.
+
+
+Nó là một trong những nền tảng cơ bản của lập trình hướng đối tượng. Ví dụ, khi bạn sử dụng cout , bạn thực sự đang sử dụng đối tượng cout của lớp ostream . Điều này truyền dữ liệu để tạo ra đầu ra tiêu chuẩn.
+--------------------------------------------------------------------
+cout << "Xin chào!" << endl;
+--------------------------------------------------------------------
+!Trong ví dụ này, không cần phải hiểu cách cout sẽ hiển thị văn bản trên màn hình của người dùng. Điều duy nhất bạn cần biết để có thể sử dụng nó là giao diện công khai.
+
+
+->Which statement about abstraction is true?
+We can have a concept, but it's separate from any specific instance
+
+
+
+Tính trừu tượng cho phép chúng ta viết một lớp tài khoản ngân hàng duy nhất, sau đó tạo các đối tượng khác nhau dựa trên lớp, cho các tài khoản ngân hàng riêng lẻ, thay vì tạo một lớp riêng cho từng tài khoản ngân hàng.
+
+!Tính trừu tượng đóng vai trò là nền tảng cho các nguyên tắc cơ bản về hướng đối tượng khác, chẳng hạn như tính kế thừa và tính đa hình . Những điều này sẽ được thảo luận sau trong khóa học.
+
+
+->What is the foundation that supports other fundamentals of object-orientation, such as inheritance and polymorphism?
+abstraction
 
