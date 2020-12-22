@@ -7,22 +7,15 @@ using namespace std;
 class Student
 {
 public:
-    Student(string name="no_name");
-    virtual ~Student();
-
-    string Getname()
-    {
-        return s_name;
-    }
-    void Setname(string val)
-    {
-        s_name = val;
-    }
-
+    Student(string name, int age = 18);
+    ~Student();
+    string Getname();
+    void SetAge(int val);
+    int GetAge();
 protected:
-
+    int s_age;
 private:
-    string s_name;
+    const string const_name;
 };
 
 #endif // STUDENT_H

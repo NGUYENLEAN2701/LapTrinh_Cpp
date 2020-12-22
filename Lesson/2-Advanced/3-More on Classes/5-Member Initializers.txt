@@ -1,0 +1,148 @@
+Member Initializers
+
+Recall that constants are variables that cannot be changed, and that all const variables must be initialized at time of creation.
+
+C++ provides a handy syntax for initializing members of the class called the member initializer list (also called a constructor initializer).
+
+->A constant variable...  cannot be changed
+
+
+
+Consider the following class:
+
+class MyClass {
+  public:
+   MyClass(int a, int b) {
+    regVar = a;
+    constVar = b;
+   }
+  private:
+    int regVar;
+    const int constVar;
+};/////error class
+
+
+This class has two member variables, regVar and constVar. It also has a constructor that takes two parameters, which are used to initialize the member variables.
+Running this code returns an error, because one of its member variables is a constant, which cannot be assigned a value after declaration.
+
+In cases like this one, a member initialization list can be used to assign values to the member variables.
+
+
+class MyClass {
+ public:
+  MyClass(int a, int b)
+  : regVar(a), constVar(b)
+  {
+  }
+ private:
+  int regVar;
+  const int constVar;
+};
+
+
+Note that in the syntax, the initialization list follows the constructor parameters. The list begins with a colon (:), and then lists each variable to be initialized, along with the value for that variable, with a comma to separate them.
+Use the syntax variable(value) to assign values.
+
+
+!The initialization list eliminates the need to place explicit assignments in the constructor body. Also, the initialization list does not end with a semicolon.
+
+->Student::Student(int a, int b)
+: age(a), num (b) {
+
+}
+
+
+Let's write the previous example using separate header and source files.
+MyClass.h
+
+class MyClass {
+  public:
+   MyClass(int a, int b);
+  private:
+   int regVar;
+   const int constVar;
+};
+
+MyClass.cpp
+
+MyClass::MyClass(int a, int b)
+: regVar(a), constVar(b)
+{
+  cout << regVar << endl;
+  cout << constVar << endl;
+}
+
+
+We have added cout statements in the constructor to print the values of the member variables.
+Our next step is to create an object of our class in main, and use the constructor to assign values.
+
+Example Full Code: 
+//main.cpp
+#include "Student.h"
+int main()
+{
+
+    Student sv1("Nguyen Le An");
+    Student sv2("Anh Hong", 20);
+
+    return 0;
+}
+//Student.h
+#include <iostream>
+#include <string>
+using namespace std;
+#ifndef STUDENT_H
+#define STUDENT_H
+class Student
+{
+public:
+    Student(string name, int age = 18);
+    virtual ~Student();
+    string Getname();
+    void SetAge(int val);
+    int GetAge();
+protected:
+    int s_age;
+private:
+    const string const_name;
+};
+#endif // STUDENT_H
+//Student.cpp
+#include "Student.h"
+Student::Student(string name,int age)
+    :const_name(name)
+{
+    SetAge(age);
+    cout << Getname() <<" "<< GetAge() <<endl;
+}
+Student::~Student()
+{
+    cout <<"Bye bye "  << Getname() << " !" << endl;
+}
+string Student::Getname()
+{
+    return const_name;
+}
+void Student::SetAge(int age)
+{
+    s_age = age;
+}
+int Student::GetAge()
+{
+    return s_age;
+}
+
+
+->Student::Student(int a, int b)
+:regVar(a), constVar(b)
+{
+    cout << regVar << constVar << endl;
+}
+
+Danh sách khởi tạo thành viên có thể được sử dụng cho các biến thông thường và phải được sử dụng cho các biến không đổi.
+
+!Ngay cả trong trường hợp các biến thành viên không phải là hằng số, bạn nên sử dụng cú pháp khởi tạo thành viên.
+
+->A constant member variable... ...must be initialized in the constructor initializer list
+
+

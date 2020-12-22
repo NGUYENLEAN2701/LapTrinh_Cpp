@@ -1,0 +1,17 @@
+Composition
+
+
+Now, our Person class has a member of type Birthday
+class Person {
+ public:
+  Person(string n, Birthday b)
+  : name(n),
+    bd(b)
+  {
+  }
+ private:
+  string name;
+  Birthday bd;
+};
+
+!Composition is used for objects that share a has-a relationship, as in "A Person has a Birthday".

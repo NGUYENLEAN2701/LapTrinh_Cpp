@@ -1,0 +1,95 @@
+Composition
+
+
+In the real world, complex objects are typically built using smaller, simpler objects. For example, a car is assembled using a metal frame, an engine, tires, and a large number of other parts. This process is called composition.
+
+In C++, object composition involves using classes as member variables in other classes.
+This sample program demonstrates composition in action. It contains Person and Birthday classes, and each Person will have a Birthday object as its member.
+Birthday:
+
+class Birthday {
+ public:
+  Birthday(int m, int d, int y)
+  : month(m), day(d), year(y)
+  { 
+  }
+ private:
+   int month;
+   int day;
+   int year;
+};
+
+Our Birthday class has three member variables. It also has a constructor that initializes the members using a member initialization list.
+
+!The class was declared in a single file for the sake of simplicity. Alternatively, you could use header and source files.
+
+->Birthday::Birthday(int m, int d, int y)
+: month(m), 
+ day(d),
+ year(y)
+ { 
+ }
+
+
+ Let's also add a printDate() function to our Birthday class:
+
+ class Birthday {
+ public:
+  Birthday(int m, int d, int y)
+  : month(m), day(d), year(y)
+  {
+  }
+  void printDate()
+  {
+   cout<<month<<"/"<<day
+   <<"/"<<year<<endl;
+  }
+ private:
+  int month;
+  int day;
+  int year;
+};
+
+!Add a printDate() function to our Birthday class.
+
+->class People{
+    public: 
+        People();
+    private:
+        int Birthday;
+        int BirtMonth;
+        int BirtYear;
+};
+
+
+ Next, we can create the Person class, which includes the Birthday class.
+
+ #include <string>
+#include "Birthday.h"
+
+class Person {
+ public:
+  Person(string n, Birthday b)
+  : name(n),
+   bd(b)
+  {
+  }
+ private:
+  string name;
+  Birthday bd;
+};
+
+The Person class has a name and a Birthday member, and a constructor to initialize them.
+Ensure that the corresponding header files are included.
+
+!More on Composition coming up in the next lesson!
+
+->#include <string>
+#include "Birthday.h"
+class People {
+public:
+ People(string n, Birthday bo);
+private:
+ string name;
+ Birthday dateOfBirth;
+};
