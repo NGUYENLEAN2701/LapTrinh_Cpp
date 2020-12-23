@@ -1,0 +1,9 @@
+Operator Overloading
+
+
+Most of the C++ built-in operators can be redefined or overloaded.
+Thus, operators can be used with user-defined types as well (for example, allowing you to add two objects together).
+
+This chart shows the operators that can be overloaded.
+
+

@@ -85,3 +85,4 @@ từ khóa this có vai trò quan trọng trong việc điều hành quá tải 
 ->void MyClass::printValue() {
  cout << this->mem;
 }
+
