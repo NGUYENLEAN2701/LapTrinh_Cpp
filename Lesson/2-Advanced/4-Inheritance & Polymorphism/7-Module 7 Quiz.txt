@@ -1,0 +1,25 @@
+->class D : public Base{};
+
+
+->protected
+
+
+->Select the statement that expresses the general rule for destructors in inheritance.
+The derived class destructor is called before the base class destructor
+
+
+->Dog dogObj; Cat catObj;
+Pet* pet1 = &dogObj;
+Pet* pet2 = &catObj;
+
+->class Person {
+public: 
+virtual void hello() { 
+   cout << "Person says hello"; }
+};
+class Student : public Person {
+public:
+ void hello() { 
+   cout << "Student says hello"; }
+};
+->virtual void foo() = 0;

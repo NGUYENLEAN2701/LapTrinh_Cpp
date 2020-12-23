@@ -85,3 +85,4 @@ behavior: hành vi
 In regard to: liên quan đến
 instantiation: sự tức thời (sự khởi tạo đối tượng )
 Abstraction: Tính trửu tượng
+derived class: lớp chuyển hóa

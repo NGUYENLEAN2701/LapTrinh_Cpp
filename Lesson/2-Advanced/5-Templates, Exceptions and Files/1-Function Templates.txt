@@ -1,0 +1,115 @@
+Function Templates
+
+
+Functions and classes help to make programs easier to write, safer, and more maintainable.
+However, while functions and classes do have all of those advantages, in certain cases they can also be somewhat limited by C++'s requirement that you specify types for all of your parameters.
+
+For example, you might want to write a function that calculates the sum of two numbers, similar to this:
+
+int sum(int a, int b) {
+  return a+b;
+}
+
+!You can use templates to define functions as well as classes. Let's see how they work.
+
+->int sum(int a, int b){
+  return a + b;
+}
+
+
+We can now call the function for two integers in our main.
+#include <iostream>
+using namespace std;
+
+int sum(int a, int b) {
+    return a+b;
+}
+
+int main () {
+    int x=7, y=15;
+    cout << sum(x, y) << endl;
+}
+
+!The function works as expected, but is limited solely to integers.
+
+->int main(){
+ int x = 7;
+ int y = 11;
+  cout << sum(x, y) << endl;
+}
+
+It becomes necessary to write a new function for each new type, such as doubles.
+double sum(double a, double b) {
+  return a+b;
+}
+Wouldn't it be much more efficient to be able to write one version of sum() to work with parameters of any type?
+Function templates give us the ability to do that!
+With function templates, the basic idea is to avoid the necessity of specifying an exact type for each variable. Instead, C++ provides us with the capability of defining functions using placeholder types, called template type parameters.
+
+To define a function template, use the keyword template, followed by the template type definition:
+
+template <class T> 
+
+!We named our template type T, which is a generic data type.
+Tap Continue to learn more!
+
+->template <class MyType>
+
+Now we can use our generic data type T in the function:
+
+#include <iostream>
+using namespace std;
+
+template <class T>
+T sum(T a, T b) {
+    return a+b;
+}
+
+int main () {
+    int x=7, y=15;
+    cout << sum(x, y) << endl;
+}
+
+The function returns a value of the generic type T, taking two parameters, also of type T.
+!Our new function worked exactly as the previous one for integer values did.
+
+-> template <class T>
+T sum( T a, T b){
+return a + b;
+}
+
+The same function can be used with other data types, for example doubles:
+
+#include <iostream>
+using namespace std;
+
+template <class T>
+T sum(T a, T b) {
+    return a+b;
+}
+
+int main () {
+    double x=7.15, y=15.54;
+    cout << sum(x, y) << endl;
+}
+
+The compiler automatically calls the function for the corresponding type.
+
+!When creating a template type parameter, the keyword typename may be used as an alternative to the keyword class: template <typename T>.
+In this context, the keywords are identical, but throughout this course, we'll use the keyword class.
+
+->int main(){
+double a = 4.3;
+double b = 7.2;
+ cout << sum(a, b) << endl;
+}
+
+Template functions can save a lot of time, because they are written only once, and work with different types.
+Template functions reduce code maintenance, because duplicate code is reduced significantly.
+
+!Enhanced safety is another advantage in using template functions, since it's not necessary to manually copy functions and change types.
+
+->template <class T>
+void myFunction(T arg){
+    cout << arg << endl;
+}
