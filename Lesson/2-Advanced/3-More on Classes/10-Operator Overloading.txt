@@ -7,3 +7,118 @@ Thus, operators can be used with user-defined types as well (for example, allowi
 This chart shows the operators that can be overloaded.
 
 
++    -     *     /       %        ^ 
+&    |     ~     !       ,        =
+<    >     <=    >=      ++       --
+<<   >>    ==    !=      &&       || 
++=   -=    /=    %=      ^=       &=
+|=   *=    <<=   >>=     []       () 
+->   ->*   new   new[]   delete   delete[] 
+
+!Operators that can't be overloaded include :: | .* | . | ?:
+
+->class Sally{
+    public:
+    Sally();
+}
+
+Let's declare a sample class to demonstrate operator overloading:
+
+class MyClass {
+ public:
+  int var;
+  MyClass() {}
+  MyClass(int a)
+  : var(a) { }
+};
+
+Our class has two constructors and one member variable.
+
+!We will be overloading the + operator, to enable adding two objects of our class together.
+
+
+->class Sally{
+public:
+ Sally(); 
+ Sally(int);
+};
+
+
+Overloaded operators are functions, defined by the keyword operator followed by the symbol for the operator being defined.
+An overloaded operator is similar to other functions in that it has a return type and a parameter list.
+
+In our example we will be overloading the + operator. It will return an object of our class and take an object of our class as its parameter.
+
+class MyClass {
+ public:
+  int var;
+  MyClass() {}
+  MyClass(int a)
+  : var(a) { }
+
+  MyClass operator+(MyClass &obj) {
+  }
+};
+
+!Now, we need to define what the function does.
+
+
+->Which choice is the keyword for overloading an operator in C++?
+operator
+
+
+We need our + operator to return a new MyClass object with a member variable equal to the sum of the two objects' member variables.
+
+class MyClass {
+ public:
+  int var;
+  MyClass() {}
+  MyClass(int a)
+  : var(a) { }
+
+  MyClass operator+(MyClass &obj) {
+   MyClass res;
+   res.var= this->var+obj.var;
+   return res; 
+  }
+};
+
+Here, we declared a new res object. We then assigned the sum of the member variables of the current object (this) and the parameter object (obj) to the res object's var member variable. The res object is returned as the result.
+
+This gives us the ability to create objects in main and use the overloaded + operator to add them together.
+
+#include <iostream>
+using namespace std;
+
+class MyClass {
+    public:
+        int var;
+        MyClass() { }
+        MyClass(int a)
+        : var(a) { }
+
+        MyClass operator+(MyClass &obj) {
+            MyClass res;
+            res.var= this->var+obj.var;
+            return res; 
+        }
+};
+
+int main() {
+    MyClass obj1(12), obj2(55);
+    MyClass res = obj1+obj2;
+
+    cout << res.var;
+}
+
+!With overloaded operators, you can use any custom logic needed. However, it's not possible to alter the operators' precedence, grouping, or number of operands.
+
+
+->Test Test::operator+(Test obj){
+  Test newObj;
+  newObj.mem = mem+obj.mem;
+  return newObj;
+}
+
+->What is the keyword for overloading an operator in C++?
+operator

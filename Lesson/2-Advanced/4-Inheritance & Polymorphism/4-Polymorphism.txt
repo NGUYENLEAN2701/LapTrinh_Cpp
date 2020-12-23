@@ -1,0 +1,9 @@
+Đa Hình - Polymorphism
+
+The word polymorphism means "having many forms".
+Typically, polymorphism occurs when there is a hierarchy of classes and they are related by inheritance.
+
+C++ polymorphism means that a call to a member function will cause a different implementation to be executed depending on the type of object that invokes the function.
+
+!Simply, polymorphism means that a single function can have a number of different implementations.
+

@@ -1,0 +1,133 @@
+Inheritance
+
+
+When inheriting classes, the base class' constructor and destructor are not inherited.
+However, they are being called when an object of the derived class is created or deleted.
+
+To further explain this behavior, let's create a sample class that includes a constructor and a destructor:
+
+class Mother {
+ public:
+ Mother() 
+ {
+  cout <<"Mother ctor"<<endl;
+ }
+ ~Mother()
+ {
+  cout <<"Mother dtor"<<endl;
+ }
+};
+
+Creating an object in main results in the following output:
+
+#include <iostream>
+using namespace std;
+
+class Mother {
+    public:
+        Mother() 
+        {
+            cout <<"Mother ctor"<<endl;
+        }
+        ~Mother()
+        {
+            cout <<"Mother dtor"<<endl;
+        }
+};
+
+int main() {
+    Mother m;
+}
+
+!The object is created and then deleted, when the program finishes to run.
+
+->Mother::Mother() {
+ cout << "constructor" << endl;
+}
+Mother::~Mother() {
+ cout << "destructor" << endl;
+}
+
+Next, let's create a Daughter class, with its own constructor and destructor, and make it a derived class of the Mother
+
+class Daughter: public Mother {
+public:
+ Daughter()
+ {
+  cout <<"Daughter ctor"<<endl;
+ }
+ ~Daughter()
+ {
+  cout <<"Daughter dtor"<<endl;
+ }
+};
+
+!Create a Daughter class, with its own constructor and destructor.
+
+-> class B {
+public:B() { 
+   cout << "B's constructor"; }
+};
+class D : public B {
+   D() { 
+   cout << "D's constructor"; }
+};
+
+
+Now, what happens when we create a Daughter object?
+
+#include <iostream>
+using namespace std;
+
+class Mother {
+    public:
+        Mother() 
+        {
+            cout <<"Mother ctor"<<endl;
+        }
+        ~Mother()
+        {
+            cout <<"Mother dtor"<<endl;
+        }
+};
+
+class Daughter: public Mother {
+    public:
+        Daughter()
+        {
+            cout <<"Daughter ctor"<<endl;
+        }
+        ~Daughter()
+        {
+            cout <<"Daughter dtor"<<endl;
+        }
+};
+
+int main() {
+    Daughter m;
+}
+
+
+Note that the base class' constructor is called first, and the derived class' constructor is called next.
+When the object is destroyed, the derived class's destructor is called, and then the base class' destructor is called.
+
+
+!You can think of it as the following: The derived class needs its base class in order to work - that is why the base class is set up first.
+
+->If class ''D'' inherits class ''B'', when an object of class ''D'' is created...
+...the ''B's'' constructor is called before the ''D's'' constructor
+
+
+Summary
+
+
+Constructors
+The base class constructor is called first.
+
+Destructors
+The derived class destructor is called first, and then the base class destructor gets called.
+
+!This sequence makes it possible to specify initialization and de-initialization scenarios for your derived classes.
+
+->If class ''D'' is derived from class ''B'', when an object of ''D'' is destroyed... the ''D'' class destructor is called before its base's destructor
+

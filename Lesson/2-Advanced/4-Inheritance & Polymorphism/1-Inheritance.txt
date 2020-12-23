@@ -1,0 +1,85 @@
+Kế Thừa - Inheritance
+
+Kế thừa là một trong những khái niệm quan trọng nhất của lập trình hướng đối tượng.
+
+Kế thừa cho phép chúng ta định nghĩa một lớp dựa trên một lớp khác. Điều này tạo điều kiện dễ dàng hơn trong việc tạo và duy trì một ứng dụng. Lớp có thuộc tính được kế thừa bởi một lớp khác được gọi là Lớp cơ sở . Lớp kế thừa các thuộc tính được gọi là lớp Derived . Ví dụ, lớp Daughter (dẫn xuất) có thể được kế thừa từ lớp Mẹ (cơ sở). Lớp dẫn xuất kế thừa tất cả các tính năng từ lớp cơ sở và có thể có các tính năng bổ sung của riêng nó.
+
+!The idea of inheritance implements the is a relationship. For example, mammal IS-A animal, dog IS-A mammal, hence dog IS-A animal as well.
+
+->What are the technical terms for the ''Mother'' and ''Daughter'' classes?
+Base class (Mother) and Derived class (Daughter)
+
+
+To demonstrate inheritance, let's create a Mother class and a Daughter class:
+class Mother
+{
+ public:
+  Mother() {};
+  void sayHi() {
+    cout << "Hi";
+  } 
+};
+
+class Daughter 
+{
+ public: 
+  Daughter() {};
+};
+
+The Mother class has a public method called sayHi().
+
+!The next step is to inherit (derive) the Daughter from the Mother.
+
+->void Mother :: sayName(){
+    cout<<"I'm a mother";
+}
+
+
+This syntax derives the Daughter class from the Mother class.
+
+class Daughter : public Mother
+{
+ public: 
+  Daughter() {};
+};
+
+The Base class is specified using a colon and an access specifier public means, that all public members of the base class are public in the derived class
+
+!In other words, all public members of the Mother class become public members of the Daughter class.
+
+->class Daughter : public Mother{};
+
+As all public members of the Mother class become public members for the Daughter class, we can create an object of type Daughter and call the sayHi() function of the Mother class for that object:
+
+#include <iostream>
+using namespace std;
+
+class Mother
+{
+    public:
+        Mother() {};
+        void sayHi() {
+            cout << "Hi";
+        }
+};
+
+class Daughter: public Mother
+{
+    public:
+        Daughter() {};
+};
+
+int main() {
+    Daughter d;
+    d.sayHi();
+}
+
+A derived class inherits all base class methods with the following exceptions:
+- Constructors, destructors
+- Overloaded operators
+- The friend functions
+
+!A class can be derived from multiple classes by specifying the base classes in a comma-separated list. For example: class Daughter: public Mother, public Father
+
+->class Derived : public Base{};
+

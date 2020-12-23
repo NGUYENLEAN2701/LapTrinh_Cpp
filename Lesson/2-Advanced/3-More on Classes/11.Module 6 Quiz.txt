@@ -1,0 +1,22 @@
+->class Student {
+public:
+ Student();
+~Student();
+};
+
+->Student st;
+Student *stPtr = &st;
+stPtr->printAge();
+
+->const Person obj;
+
+->P::P(double w):
+weight(w){}
+
+->Select the keyword that will allow you to indicate that a function is a friend function for a class.
+friend
+
+->void Test::printValues() { 
+    cout << this->mem;
+    cout << this->mem2;
+}
