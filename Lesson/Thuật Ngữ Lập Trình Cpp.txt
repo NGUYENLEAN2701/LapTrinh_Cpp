@@ -87,3 +87,4 @@ instantiation: sự tức thời (sự khởi tạo đối tượng )
 Abstraction: Tính trửu tượng
 derived class: lớp chuyển hóa
 Template Specialization: mẫu chuyên môn hóa
+handle: xử lý

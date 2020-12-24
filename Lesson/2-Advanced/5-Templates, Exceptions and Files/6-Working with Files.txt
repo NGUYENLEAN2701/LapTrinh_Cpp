@@ -1,0 +1,148 @@
+Working with Files
+
+
+Another useful C++ feature is the ability to read and write to files. That requires the standard C++ library called fstream.
+Three new data types are defined in fstream:
+ofstream: Output file stream that creates and writes information to files.
+ifstream: Input file stream that reads information from files.
+fstream: General file stream, with both ofstream and ifstream capabilities that allow it to create, read, and write information to files.
+
+To perform file processing in C++, header files <iostream> and <fstream> must be included in the C++ source file.
+
+#include <iostream>
+#include <fstream>
+
+!These classes are derived directly or indirectly from the classes istream and ostream. We have already used objects whose types were these classes: cin is an object of class istream and cout is an object of class ostream.
+
+-><fstream>
+
+
+Opening a File
+
+
+A file must be opened before you can read from it or write to it.
+Either the ofstream or fstream object may be used to open a file for writing.
+Let's open a file called "test.txt" and write some content to it:
+
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main() {
+  ofstream MyFile;
+  MyFile.open("test.txt");
+
+  MyFile << "Some text. \n";
+}
+
+
+The above code creates an ofstream object called MyFile, and uses the open() function to open the "test.txt" file on the file system. As you can see, the same stream output operator is used to write into the file.
+
+!If the specified file does not exist, the open function will create it automatically.
+
+->#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+    ofstream MyFile;
+    MyFile.open("test.txt");
+
+    MyFile << "Some text. abc xyz \n";
+    return 0;
+}
+
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+    ofstream MyFile;
+    MyFile.open("test.txt");
+
+    MyFile << "Some text! \n";
+    MyFile.close();
+}
+
+
+Running this code will cause a "test.txt" file to be created in the directory of your project with "Some text!" written in it.
+
+!You also have the option of specifying a path for your file in the open function, since it can be in a location other than that of your project.
+
+
+->close
+
+
+You can also provide the path to your file using the ofstream objects constructor, instead of calling the open function.
+
+
+#include <fstream>
+using namespace std;
+
+int main() {
+  ofstream MyFile("test.txt");
+
+  MyFile << "This is awesome! \n";
+  MyFile.close();
+}
+
+
+!As with the open function, you can provide a full path to your file located in a different directory.
+
+
+Under certain circumstances, such as when you don't have file permissions, the open function can fail.
+The is_open() member function checks whether the file is open and ready to be accessed.
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main() {
+  ofstream MyFile("test.txt");
+
+  if (MyFile.is_open()) {
+   MyFile << "This is awesome! \n";
+  }
+  else {
+   cout << "Something went wrong";
+  }
+  MyFile.close();
+}
+
+
+!The is_open() member function checks whether the file is open and ready to be accessed.
+
+
+->is_open()
+
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+    /*     ofstream MyFile1("test.txt");
+
+    MyFile1 << "This is awesome! \n";
+    MyFile1.close(); */
+
+    string line;
+    ifstream MyFile("test.txt");
+    while (getline(MyFile, line))
+    {
+        cout << line << '\n';
+    }
+    MyFile.close();
+}
+
+!The example above reads a text file and prints the contents to the screen.
+Our while loop uses the getline function to read the file line by line.
+
+
+
+
